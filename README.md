@@ -27,10 +27,10 @@ Hello from Epoll Server!"""
 
 
 ## Related Products
-* [Microsoft System Center Endpoint Protection Cookbook - Second Edition](https://www.packtpub.com/networking-and-servers/microsoft-system-center-1511-endpoint-protection-cookbook?utm_source=github&utm_medium=repository&utm_content=9781786464286)
+* [Python GUI Programming Cookbook - Second Edition](https://www.packtpub.com/application-development/python-gui-programming-cookbook-second-edition?utm_source=github&utm_medium=repository&utm_content=9781787129450)
 
-* [Mastering Windows PowerShell Scripting](https://www.packtpub.com/application-development/mastering-windows-powershell-scripting?utm_source=github&utm_medium=repository&utm_content=9781782173557)
+* [Modern Python Cookbook](https://www.packtpub.com/application-development/modern-python-cookbook?utm_source=github&utm_medium=repository&utm_content=9781786469250)
 
-* [Microsoft System Center 2016 Service Manager Cookbook - Second Edition](https://www.packtpub.com/virtualization-and-cloud/microsoft-system-center-2016-service-manager-cookbook-second-edition?utm_source=github&utm_medium=repository&utm_content=9781786464897)
+* [Python Machine Learning](https://www.packtpub.com/big-data-and-business-intelligence/python-machine-learning?utm_source=github&utm_medium=repository&utm_content=9781783555130)
 ### Suggestions and Feedback
 [Click here](https://docs.google.com/forms/d/e/1FAIpQLSe5qwunkGf6PUvzPirPDtuy1Du5Rlzew23UBp2S-P3wB-GcwQ/viewform) if you have any feedback or suggestions.
