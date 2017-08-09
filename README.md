@@ -35,95 +35,182 @@ You also need a working internet connection to install the third-party software 
 The following is a list of the Python third-party libraries with their download URLs:
 
 •	ntplib: https://pypi.python.org/pypi/ntplib/
-•	diesel: https://pypi.python.org/pypi/diesel/
-•	nmap: https://pypi.python.org/pypi/python-nmap
-•	scapy: https://pypi.python.org/pypi/scapy
-•	netifaces: https://pypi.python.org/pypi/netifaces/
-•	netaddr: https://pypi.python.org/pypi/netaddr
-•	pyopenssl: https://pypi.python.org/pypi/pyOpenSSL
-•	pygeocoder: https://pypi.python.org/pypi/pygocoder
-•	pyyaml: https://pypi.python.org/pypi/PyYAML
-•	requests: https://pypi.python.org/pypi/requests
-•	feedparser: https://pypi.python.org/pypi/feedparser
-•	paramiko: https://pypi.python.org/pypi/paramiko/
-•	fabric: https://pypi.python.org/pypi/Fabric
-•	supervisor: https://pypi.python.org/pypi/supervisor
-•	xmlrpclib: https://pypi.python.org/pypi/xmlrpclib
-•	SOAPpy: https://pypi.python.org/pypi/SOAPpy
-•	bottlenose: https://pypi.python.org/pypi/bottlenose
-•	construct: https://pypi.python.org/pypi/construct/
-•	libpcap: https://pypi.python.org/pypi/pcap
-•	setup tools: https://pypi.python.org/pypi/setuptools
-•	exabgp: https://pypi.python.org/pypi/exabgp
-•	traixroute: https://pypi.python.org/pypi/traixroute
-•	dronekit: https://pypi.python.org/pypi/dronekit
-•	dronekit-sitl: https://pypi.python.org/simple/dronekit-sitl/
-•	ryu: https://pypi.python.org/pypi/ryu
-•	Flask: https://pypi.python.org/pypi/Flask
-•	smtpd: https://pypi.python.org/pypi/secure-smtpd
-•	twisted: https://pypi.python.org/pypi/Twisted
-•	tornado: https://pypi.python.org/pypi/tornado
-•	dnspython: https://pypi.python.org/pypi/dnspython
-•	ldap3: https://pypi.python.org/pypi/ldap3
-•	Eve: https://pypi.python.org/pypi/Eve
-•	RequestsThrottler: https://pypi.python.org/pypi/RequestsThrottler
-•	PyNSXv: https://pypi.python.org/pypi/pynsxv
-•	vmware-nsx: https://pypi.python.org/pypi/vmware-nsx
-Other software needed to run some recipes are as follows:
-•	postfix: http://www.postfix.org/
-•	openssh server: http://www.openssh.com/
-•	mysql server: http://downloads.mysql.com/
-•	apache2: http://httpd.apache.org/download.cgi/
-•	virtualenv: https://virtualenv.pypa.io/
-•	filezilla: https://filezilla-project.org/
-•	vsftpd: https://security.appspot.com/vsftpd.html
-•	telnetd: telnetd.sourceforge.net/
-•	curl: https://curl.haxx.se/
-•	NS-3: https://www.nsnam.org/ns-3-26/download/
-•	Mininet: mininet.org/
-•	Ansible: https://www.ansible.com/
-•	Git: https://git-scm.com/
-•	aptitude: https://www.openhub.net/p/aptitude
-•	Node-ws / wscat: https://www.npmjs.com/package/wscat
-•	MaxiNet: https://github.com/MaxiNet/MaxiNet/
-•	Mininet-WiFi: https://github.com/intrig-unicamp/mininet-wifi
-•	ContainerNet: https://github.com/containernet/containernet.git
-•	Ant: ant.apache.org/
-•	Maven: https://maven.apache.org/
-•	OpenDaylight: https://www.opendaylight.org/downloads
-•	ONOS: https://wiki.onosproject.org/display/ONOS/Downloads
-•	Floodlight: http://www.projectfloodlight.org/download/
-•	POX: http://github.com/noxrepo/pox
-•	libnl-3-dev: https://packages.debian.org/sid/libnl-3-dev
-•	libnl-genl-3-dev: https://packages.debian.org/sid/libnl-genl-3-dev
-•	libnl-route-3-dev: https://packages.debian.org/sid/libnl-route-3-dev
-•	pkg-config: https://www.freedesktop.org/wiki/Software/pkg-config/
-•	python-tz: pytz.sourceforge.net/
-•	libpcap-dev: https://packages.debian.org/libpcap-dev
-•	libcap2-dev: https://packages.debian.org/jessie/libcap2-dev
-•	wireshark: https://www.wireshark.org/
-•	Juniper Contrail: http://www.juniper.net/support/downloads/?p=contrail#sw
-•	OpenContrail Controller: https://github.com/Juniper/contrail-controller
-•	Contrail Server Manager: https://github.com/Juniper/contrail-server-manager.git
-•	VMWare NSX for vSphere 6.3.2: https://my.vmware.com/group/vmware/details?downloadGroup=NSXV_632_OSS&productId=417
-•	OPNFV Compass: https://wiki.opnfv.org/display/compass4nfv/Compass4nfv
-•	OPNFV SDNVPN: https://wiki.opnfv.org/display/sdnvpn/SDNVPN+project+main+page
-•	libpcap-dev: https://packages.debian.org/libpcap-dev
-•	DPDK: http://dpdk.org/download
-•	SNAS.io: http://www.snas.io/
-•	pnda.io: http://pnda.io/
-•	bgperf: https://github.com/pradeeban/bgperf.git
-•	swig: www.swig.org/
-•	yabgp: https://github.com/smartbgp/yabgp
-•	Virtualbox: https://www.virtualbox.org/wiki/VirtualBox
-•	Vagrant: https://www.vagrantup.com/
-•	RED PNDA: https://github.com/pndaproject/red-pnda
-•	Apache ZooKeeper: https://zookeeper.apache.org/
-•	Apache Cassandra: http://cassandra.apache.org/
-•	RabbitMQ: https://www.rabbitmq.com/
-•	pyIOSXR: https://github.com/fooelisa/pyiosxr
-•	Cisco Spark API: https://github.com/CiscoDevNet/ciscosparkapi
 
+•	diesel: https://pypi.python.org/pypi/diesel/
+
+•	nmap: https://pypi.python.org/pypi/python-nmap
+
+•	scapy: https://pypi.python.org/pypi/scapy
+
+•	netifaces: https://pypi.python.org/pypi/netifaces/
+
+•	netaddr: https://pypi.python.org/pypi/netaddr
+
+•	pyopenssl: https://pypi.python.org/pypi/pyOpenSSL
+
+•	pygeocoder: https://pypi.python.org/pypi/pygocoder
+
+•	pyyaml: https://pypi.python.org/pypi/PyYAML
+
+•	requests: https://pypi.python.org/pypi/requests
+
+•	feedparser: https://pypi.python.org/pypi/feedparser
+
+•	paramiko: https://pypi.python.org/pypi/paramiko/
+
+•	fabric: https://pypi.python.org/pypi/Fabric
+
+•	supervisor: https://pypi.python.org/pypi/supervisor
+
+•	xmlrpclib: https://pypi.python.org/pypi/xmlrpclib
+
+•	SOAPpy: https://pypi.python.org/pypi/SOAPpy
+
+•	bottlenose: https://pypi.python.org/pypi/bottlenose
+
+•	construct: https://pypi.python.org/pypi/construct/
+
+•	libpcap: https://pypi.python.org/pypi/pcap
+
+•	setup tools: https://pypi.python.org/pypi/setuptools
+
+•	exabgp: https://pypi.python.org/pypi/exabgp
+
+•	traixroute: https://pypi.python.org/pypi/traixroute
+
+•	dronekit: https://pypi.python.org/pypi/dronekit
+
+•	dronekit-sitl: https://pypi.python.org/simple/dronekit-sitl/
+
+•	ryu: https://pypi.python.org/pypi/ryu
+
+•	Flask: https://pypi.python.org/pypi/Flask
+
+•	smtpd: https://pypi.python.org/pypi/secure-smtpd
+
+•	twisted: https://pypi.python.org/pypi/Twisted
+
+•	tornado: https://pypi.python.org/pypi/tornado
+
+•	dnspython: https://pypi.python.org/pypi/dnspython
+
+•	ldap3: https://pypi.python.org/pypi/ldap3
+
+•	Eve: https://pypi.python.org/pypi/Eve
+
+•	RequestsThrottler: https://pypi.python.org/pypi/RequestsThrottler
+
+•	PyNSXv: https://pypi.python.org/pypi/pynsxv
+
+•	vmware-nsx: https://pypi.python.org/pypi/vmware-nsx
+
+Other software needed to run some recipes are as follows:
+
+•	postfix: http://www.postfix.org/
+
+•	openssh server: http://www.openssh.com/
+
+•	mysql server: http://downloads.mysql.com/
+
+•	apache2: http://httpd.apache.org/download.cgi/
+
+•	virtualenv: https://virtualenv.pypa.io/
+
+•	filezilla: https://filezilla-project.org/
+
+•	vsftpd: https://security.appspot.com/vsftpd.html
+
+•	telnetd: telnetd.sourceforge.net/
+
+•	curl: https://curl.haxx.se/
+
+•	NS-3: https://www.nsnam.org/ns-3-26/download/
+
+•	Mininet: mininet.org/
+
+•	Ansible: https://www.ansible.com/
+
+•	Git: https://git-scm.com/
+
+•	aptitude: https://www.openhub.net/p/aptitude
+
+•	Node-ws / wscat: https://www.npmjs.com/package/wscat
+
+•	MaxiNet: https://github.com/MaxiNet/MaxiNet/
+
+•	Mininet-WiFi: https://github.com/intrig-unicamp/mininet-wifi
+
+•	ContainerNet: https://github.com/containernet/containernet.git
+
+•	Ant: ant.apache.org/
+
+•	Maven: https://maven.apache.org/
+
+•	OpenDaylight: https://www.opendaylight.org/downloads
+
+•	ONOS: https://wiki.onosproject.org/display/ONOS/Downloads
+
+•	Floodlight: http://www.projectfloodlight.org/download/
+
+•	POX: http://github.com/noxrepo/pox
+
+•	libnl-3-dev: https://packages.debian.org/sid/libnl-3-dev
+
+•	libnl-genl-3-dev: https://packages.debian.org/sid/libnl-genl-3-dev
+
+•	libnl-route-3-dev: https://packages.debian.org/sid/libnl-route-3-dev
+
+•	pkg-config: https://www.freedesktop.org/wiki/Software/pkg-config/
+
+•	python-tz: pytz.sourceforge.net/
+
+•	libpcap-dev: https://packages.debian.org/libpcap-dev
+
+•	libcap2-dev: https://packages.debian.org/jessie/libcap2-dev
+
+•	wireshark: https://www.wireshark.org/
+
+•	Juniper Contrail: http://www.juniper.net/support/downloads/?p=contrail#sw
+
+•	OpenContrail Controller: https://github.com/Juniper/contrail-controller
+
+•	Contrail Server Manager: https://github.com/Juniper/contrail-server-manager.git
+
+•	VMWare NSX for vSphere 6.3.2: https://my.vmware.com/group/vmware/details?downloadGroup=NSXV_632_OSS&productId=417
+
+•	OPNFV Compass: https://wiki.opnfv.org/display/compass4nfv/Compass4nfv
+
+•	OPNFV SDNVPN: https://wiki.opnfv.org/display/sdnvpn/SDNVPN+project+main+page
+
+•	libpcap-dev: https://packages.debian.org/libpcap-dev
+
+•	DPDK: http://dpdk.org/download
+
+•	SNAS.io: http://www.snas.io/
+
+•	pnda.io: http://pnda.io/
+
+•	bgperf: https://github.com/pradeeban/bgperf.git
+
+•	swig: www.swig.org/
+
+•	yabgp: https://github.com/smartbgp/yabgp
+
+•	Virtualbox: https://www.virtualbox.org/wiki/VirtualBox
+
+•	Vagrant: https://www.vagrantup.com/
+
+•	RED PNDA: https://github.com/pndaproject/red-pnda
+
+•	Apache ZooKeeper: https://zookeeper.apache.org/
+
+•	Apache Cassandra: http://cassandra.apache.org/
+
+•	RabbitMQ: https://www.rabbitmq.com/
+
+•	pyIOSXR: https://github.com/fooelisa/pyiosxr
+
+•	Cisco Spark API: https://github.com/CiscoDevNet/ciscosparkapi
 
 
 ## Related Products
