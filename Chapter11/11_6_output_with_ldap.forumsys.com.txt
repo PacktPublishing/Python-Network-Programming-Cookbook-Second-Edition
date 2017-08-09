@@ -1,0 +1,3042 @@
+******************Server Info**************
+DSA info (from DSE):
+  Supported LDAP versions: 3
+  Naming contexts: 
+    dc=example,dc=com
+
+  Supported controls: 
+    1.2.826.0.1.3344810.2.3 - Matched Values - Control - RFC3876
+    1.2.840.113556.1.4.319 - LDAP Simple Paged Results - Control - RFC2696
+    1.3.6.1.1.12 - Assertion - Control - RFC4528
+    1.3.6.1.1.13.1 - LDAP Pre-read - Control - RFC4527
+    1.3.6.1.1.13.2 - LDAP Post-read - Control - RFC4527
+    1.3.6.1.4.1.4203.1.10.1 - Subentries - Control - RFC3672
+    2.16.840.1.113730.3.4.18 - Proxy Authorization Control - Control - RFC6171
+    2.16.840.1.113730.3.4.2 - ManageDsaIT - Control - RFC3296
+  Supported extensions: 
+    1.3.6.1.1.8 - Cancel Operation - Extension - RFC3909
+    1.3.6.1.4.1.1466.20037 - StartTLS - Extension - RFC4511-RFC4513
+    1.3.6.1.4.1.4203.1.11.1 - Modify Password - Extension - RFC3062
+    1.3.6.1.4.1.4203.1.11.3 - Who am I - Extension - RFC4532
+  Supported features: 
+    1.3.6.1.1.14 - Modify-Increment - Feature - RFC4525
+    1.3.6.1.4.1.4203.1.5.1 - All Op Attrs - Feature - RFC3673
+    1.3.6.1.4.1.4203.1.5.2 - OC AD Lists - Feature - RFC4529
+    1.3.6.1.4.1.4203.1.5.3 - True/False filters - Feature - RFC4526
+    1.3.6.1.4.1.4203.1.5.4 - Language Tag Options - Feature - RFC3866
+    1.3.6.1.4.1.4203.1.5.5 - language Range Options - Feature - RFC3866
+
+  Schema entry: 
+    cn=Subschema
+Vendor name: []
+Vendor version: []
+Other:
+  entryDN: 
+
+  objectClass: 
+    top
+    OpenLDAProotDSE
+  structuralObjectClass: 
+OpenLDAProotDSE
+  configContext: 
+    cn=config
+
+******************Server Schema**************
+DSA Schema from: cn=Subschema
+  Attribute types:{u'homeDirectory': Attribute type: 1.3.6.1.1.1.1.3
+  Short name: homeDirectory
+  Description: The absolute path to the home directory
+  Single value: True
+  Equality rule: caseExactIA5Match
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.26 [('1.3.6.1.4.1.1466.115.121.1.26', 'LDAP_SYNTAX', 'IA5 String', 'RFC4517')]
+  Mandatory in: posixAccount
+, u'roleOccupant': Attribute type: 2.5.4.33
+  Short name: roleOccupant
+  Description: RFC2256: occupant of role
+  Single value: False
+  Superior: distinguishedName
+  Optional in: organizationalRole
+  OidInfo: ('2.5.4.33', 'ATTRIBUTE_TYPE', 'roleOccupant', 'RFC4519')
+, u'nisMapEntry': Attribute type: 1.3.6.1.1.1.1.27
+  Short name: nisMapEntry
+  Single value: True
+  Equality rule: caseExactIA5Match
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.26 [('1.3.6.1.4.1.1466.115.121.1.26', 'LDAP_SYNTAX', 'IA5 String', 'RFC4517')]
+  Minimum length: 1024
+  Mandatory in: nisObject
+, u'nSRecord': Attribute type: 0.9.2342.19200300.100.1.29
+  Short name: nSRecord
+  Single value: False
+  Equality rule: caseIgnoreIA5Match
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.26 [('1.3.6.1.4.1.1466.115.121.1.26', 'LDAP_SYNTAX', 'IA5 String', 'RFC4517')]
+  Optional in: dNSDomain
+  OidInfo: ('0.9.2342.19200300.100.1.29', 'ATTRIBUTE_TYPE', 'nSRecord', 'RFC1274')
+, u'ipNetmaskNumber': Attribute type: 1.3.6.1.1.1.1.21
+  Short name: ipNetmaskNumber
+  Description: IP netmask
+  Single value: True
+  Equality rule: caseIgnoreIA5Match
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.26 [('1.3.6.1.4.1.1466.115.121.1.26', 'LDAP_SYNTAX', 'IA5 String', 'RFC4517')]
+  Minimum length: 128
+  Optional in: ipNetwork
+, u'photo': Attribute type: 0.9.2342.19200300.100.1.7
+  Short name: photo
+  Description: RFC1274: photo (G3 fax)
+  Single value: False
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.23 [('1.3.6.1.4.1.1466.115.121.1.23', 'LDAP_SYNTAX', 'Fax', 'RFC4517')]
+  Minimum length: 25000
+  Optional in: inetOrgPerson
+  OidInfo: ('0.9.2342.19200300.100.1.7', 'ATTRIBUTE_TYPE', 'photo', 'RFC1274')
+, u'olcUpdateDN': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.2.0.12
+  Short name: olcUpdateDN
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.12 [('1.3.6.1.4.1.1466.115.121.1.12', 'LDAP_SYNTAX', 'DN', 'RFC4517')]
+  Optional in: olcDatabaseConfig
+, u'ipNetworkNumber': Attribute type: 1.3.6.1.1.1.1.20
+  Short name: ipNetworkNumber
+  Description: IP network
+  Single value: True
+  Equality rule: caseIgnoreIA5Match
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.26 [('1.3.6.1.4.1.1466.115.121.1.26', 'LDAP_SYNTAX', 'IA5 String', 'RFC4517')]
+  Minimum length: 128
+  Mandatory in: ipNetwork
+, u'shadowFlag': Attribute type: 1.3.6.1.1.1.1.11
+  Short name: shadowFlag
+  Single value: True
+  Equality rule: integerMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27 [('1.3.6.1.4.1.1466.115.121.1.27', 'LDAP_SYNTAX', 'Integer', 'RFC4517')]
+  Optional in: shadowAccount
+, u'olcReferral': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.41
+  Short name: olcReferral
+  Single value: True
+  Superior: labeledURI
+  Optional in: olcGlobal
+, u'manager': Attribute type: 0.9.2342.19200300.100.1.10
+  Short name: manager
+  Description: RFC1274: DN of manager
+  Single value: False
+  Equality rule: distinguishedNameMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.12 [('1.3.6.1.4.1.1466.115.121.1.12', 'LDAP_SYNTAX', 'DN', 'RFC4517')]
+  Optional in: ipHost, ipNetwork, inetOrgPerson
+  OidInfo: ('0.9.2342.19200300.100.1.10', 'ATTRIBUTE_TYPE', 'manager', 'RFC4524')
+, u'olcReplicaPidFile': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.44
+  Short name: olcReplicaPidFile
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcDatabaseConfig
+, u'olcHidden': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.2.0.17
+  Short name: olcHidden
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.7 [('1.3.6.1.4.1.1466.115.121.1.7', 'LDAP_SYNTAX', 'Boolean', 'RFC4517')]
+  Optional in: olcDatabaseConfig
+, u'olcInclude': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.19
+  Short name: olcInclude
+  Single value: False
+  Superior: labeledURI
+  Mandatory in: olcIncludeFile
+, u'gn': Attribute type: 2.5.4.42
+  Short name: givenName, gn
+  Description: RFC2256: first name(s) for which the entity is known by
+  Single value: False
+  Superior: name
+  Optional in: inetOrgPerson
+  OidInfo: ('2.5.4.42', 'ATTRIBUTE_TYPE', 'givenName', 'RFC4519')
+, u'olcIndexIntLen': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.84
+  Short name: olcIndexIntLen
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27 [('1.3.6.1.4.1.1466.115.121.1.27', 'LDAP_SYNTAX', 'Integer', 'RFC4517')]
+  Optional in: olcGlobal
+, u'olcTLSCRLCheck': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.73
+  Short name: olcTLSCRLCheck
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcGlobal
+, u'olcAccess': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.1
+  Short name: olcAccess
+  Description: Access Control List
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcDatabaseConfig
+  Extensions:
+    X-ORDERED: VALUES
+, u'olcDbIndex': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.2.0.2
+  Short name: olcDbIndex
+  Description: Attribute index parameters
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcHdbConfig
+, u'olcTLSCACertificatePath': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.69
+  Short name: olcTLSCACertificatePath
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcGlobal
+, u'shadowMax': Attribute type: 1.3.6.1.1.1.1.7
+  Short name: shadowMax
+  Single value: True
+  Equality rule: integerMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27 [('1.3.6.1.4.1.1466.115.121.1.27', 'LDAP_SYNTAX', 'Integer', 'RFC4517')]
+  Optional in: shadowAccount
+, u'otherMailbox': Attribute type: 0.9.2342.19200300.100.1.22
+  Short name: otherMailbox
+  Single value: False
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.39 [('1.3.6.1.4.1.1466.115.121.1.39', 'LDAP_SYNTAX', 'Other Mailbox', 'RFC4517')]
+  Optional in: newPilotPerson, pilotPerson
+  OidInfo: ('0.9.2342.19200300.100.1.22', 'ATTRIBUTE_TYPE', 'otherMailbox', 'RFC1274')
+, u'title': Attribute type: 2.5.4.12
+  Short name: title
+  Description: RFC2256: title associated with the entity
+  Single value: False
+  Superior: name
+  Optional in: organizationalPerson
+  OidInfo: ('2.5.4.12', 'ATTRIBUTE_TYPE', 'title', 'RFC4519')
+, u'facsimileTelephoneNumber': Attribute type: 2.5.4.23
+  Short name: facsimileTelephoneNumber, fax
+  Description: RFC2256: Facsimile (Fax) Telephone Number
+  Single value: False
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.22 [('1.3.6.1.4.1.1466.115.121.1.22', 'LDAP_SYNTAX', 'Facsimile Telephone Number', 'RFC4517')]
+  Optional in: domain, organizationalPerson, RFC822localPart, organizationalRole, residentialPerson, dmd, organizationalUnit, organization
+  OidInfo: ('2.5.4.23', 'ATTRIBUTE_TYPE', 'facsimileTelephoneNumber', 'RFC4519')
+, u'olcDbLockDetect': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.2.1.8
+  Short name: olcDbLockDetect
+  Description: Deadlock detection algorithm
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcHdbConfig
+, u'olcGentleHUP': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.17
+  Short name: olcGentleHUP
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.7 [('1.3.6.1.4.1.1466.115.121.1.7', 'LDAP_SYNTAX', 'Boolean', 'RFC4517')]
+  Optional in: olcGlobal
+, u'olcDbLinearIndex': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.2.1.7
+  Short name: olcDbLinearIndex
+  Description: Index attributes one at a time
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.7 [('1.3.6.1.4.1.1466.115.121.1.7', 'LDAP_SYNTAX', 'Boolean', 'RFC4517')]
+  Optional in: olcHdbConfig
+, u'employeeType': Attribute type: 2.16.840.1.113730.3.1.4
+  Short name: employeeType
+  Description: RFC2798: type of employment for a person
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: inetOrgPerson
+, u'mDRecord': Attribute type: 0.9.2342.19200300.100.1.27
+  Short name: mDRecord
+  Single value: False
+  Equality rule: caseIgnoreIA5Match
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.26 [('1.3.6.1.4.1.1466.115.121.1.26', 'LDAP_SYNTAX', 'IA5 String', 'RFC4517')]
+  Optional in: dNSDomain
+  OidInfo: ('0.9.2342.19200300.100.1.27', 'ATTRIBUTE_TYPE', 'mDRecord', 'RFC1274')
+, u'personalSignature': Attribute type: 0.9.2342.19200300.100.1.53
+  Short name: personalSignature
+  Description: RFC1274: Personal Signature (G3 fax)
+  Single value: False
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.23 [('1.3.6.1.4.1.1466.115.121.1.23', 'LDAP_SYNTAX', 'Fax', 'RFC4517')]
+  Optional in: newPilotPerson, pilotPerson
+  OidInfo: ('0.9.2342.19200300.100.1.53', 'ATTRIBUTE_TYPE', 'personalSignature', 'RFC1274')
+, u'olcDbIDLcacheSize': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.2.1.6
+  Short name: olcDbIDLcacheSize
+  Description: IDL cache size in IDLs
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27 [('1.3.6.1.4.1.1466.115.121.1.27', 'LDAP_SYNTAX', 'Integer', 'RFC4517')]
+  Optional in: olcHdbConfig
+, u'attributeTypes': Attribute type: 2.5.21.5
+  Short name: attributeTypes
+  Description: RFC4512: attribute types
+  Single value: False
+  Usage: Directory operation
+  Equality rule: objectIdentifierFirstComponentMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.3 [('1.3.6.1.4.1.1466.115.121.1.3', 'LDAP_SYNTAX', 'Attribute Type Description', 'RFC4517')]
+  Optional in: subschema
+  OidInfo: ('2.5.21.5', 'ATTRIBUTE_TYPE', 'attributeTypes', 'RFC4512')
+, u'olcTLSProtocolMin': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.87
+  Short name: olcTLSProtocolMin
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+, u'olcThreads': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.66
+  Short name: olcThreads
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27 [('1.3.6.1.4.1.1466.115.121.1.27', 'LDAP_SYNTAX', 'Integer', 'RFC4517')]
+  Optional in: olcGlobal
+, u'preferredLanguage': Attribute type: 2.16.840.1.113730.3.1.39
+  Short name: preferredLanguage
+  Description: RFC2798: preferred written or spoken language for a person
+  Single value: True
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: inetOrgPerson
+, u'olcAuthzPolicy': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.7
+  Short name: olcAuthzPolicy
+  Single value: True
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcGlobal
+, u'documentTitle': Attribute type: 0.9.2342.19200300.100.1.12
+  Short name: documentTitle
+  Description: RFC1274: title of document
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Minimum length: 256
+  Optional in: document
+  OidInfo: ('0.9.2342.19200300.100.1.12', 'ATTRIBUTE_TYPE', 'documentTitle', 'RFC4524')
+, u'postOfficeBox': Attribute type: 2.5.4.18
+  Short name: postOfficeBox
+  Description: RFC2256: Post Office Box
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Minimum length: 40
+  Optional in: domain, organizationalPerson, RFC822localPart, organizationalRole, residentialPerson, dmd, organizationalUnit, organization
+  OidInfo: ('2.5.4.18', 'ATTRIBUTE_TYPE', 'postOfficeBox', 'RFC4519')
+, u'olcModuleLoad': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.30
+  Short name: olcModuleLoad
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcModuleList
+  Extensions:
+    X-ORDERED: VALUES
+, u'fax': Attribute type: 2.5.4.23
+  Short name: facsimileTelephoneNumber, fax
+  Description: RFC2256: Facsimile (Fax) Telephone Number
+  Single value: False
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.22 [('1.3.6.1.4.1.1466.115.121.1.22', 'LDAP_SYNTAX', 'Facsimile Telephone Number', 'RFC4517')]
+  Optional in: domain, organizationalPerson, RFC822localPart, organizationalRole, residentialPerson, dmd, organizationalUnit, organization
+  OidInfo: ('2.5.4.23', 'ATTRIBUTE_TYPE', 'facsimileTelephoneNumber', 'RFC4519')
+, u'olcAllows': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.2
+  Short name: olcAllows
+  Description: Allowed set of deprecated features
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcGlobal
+, u'olcIndexSubstrAnyStep': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.23
+  Short name: olcIndexSubstrAnyStep
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27 [('1.3.6.1.4.1.1466.115.121.1.27', 'LDAP_SYNTAX', 'Integer', 'RFC4517')]
+  Optional in: olcGlobal
+, u'olcTLSVerifyClient': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.75
+  Short name: olcTLSVerifyClient
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcGlobal
+, u'rfc822Mailbox': Attribute type: 0.9.2342.19200300.100.1.3
+  Short name: mail, rfc822Mailbox
+  Description: RFC1274: RFC822 Mailbox
+  Single value: False
+  Equality rule: caseIgnoreIA5Match
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.26 [('1.3.6.1.4.1.1466.115.121.1.26', 'LDAP_SYNTAX', 'IA5 String', 'RFC4517')]
+  Minimum length: 256
+  Optional in: inetOrgPerson, newPilotPerson, pilotPerson
+  OidInfo: ('0.9.2342.19200300.100.1.3', 'ATTRIBUTE_TYPE', ['mail', 'RFC822Mailbox'], 'RFC4524')
+, u'olcDbShmKey': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.2.1.10
+  Short name: olcDbShmKey
+  Description: Key for shared memory region
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27 [('1.3.6.1.4.1.1466.115.121.1.27', 'LDAP_SYNTAX', 'Integer', 'RFC4517')]
+  Optional in: olcHdbConfig
+, u'dc': Attribute type: 0.9.2342.19200300.100.1.25
+  Short name: dc, domainComponent
+  Description: RFC1274/2247: domain component
+  Single value: True
+  Equality rule: caseIgnoreIA5Match
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.26 [('1.3.6.1.4.1.1466.115.121.1.26', 'LDAP_SYNTAX', 'IA5 String', 'RFC4517')]
+  Mandatory in: domain, dcObject
+  OidInfo: ('0.9.2342.19200300.100.1.25', 'ATTRIBUTE_TYPE', ['DC', 'domainComponent'], 'RFC4519')
+, u'textEncodedORAddress': Attribute type: 0.9.2342.19200300.100.1.2
+  Short name: textEncodedORAddress
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Minimum length: 256
+  Optional in: newPilotPerson, pilotPerson
+  OidInfo: ('0.9.2342.19200300.100.1.2', 'ATTRIBUTE_TYPE', 'textEncodedORAddress', 'RFC1274')
+, u'olcDbDirtyRead': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.2.1.5
+  Short name: olcDbDirtyRead
+  Description: Allow reads of uncommitted data
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.7 [('1.3.6.1.4.1.1466.115.121.1.7', 'LDAP_SYNTAX', 'Boolean', 'RFC4517')]
+  Optional in: olcHdbConfig
+, u'modifiersName': Attribute type: 2.5.18.4
+  Short name: modifiersName
+  Description: RFC4512: name of last modifier
+  Single value: True
+  No user modification: True
+  Usage: Directory operation
+  Equality rule: distinguishedNameMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.12 [('1.3.6.1.4.1.1466.115.121.1.12', 'LDAP_SYNTAX', 'DN', 'RFC4517')]
+  OidInfo: ('2.5.18.4', 'ATTRIBUTE_TYPE', 'modifiersName', 'RFC4512')
+, u'emailAddress': Attribute type: 1.2.840.113549.1.9.1
+  Short name: email, emailAddress, pkcs9email
+  Description: RFC3280: legacy attribute for email addresses in DNs
+  Single value: False
+  Equality rule: caseIgnoreIA5Match
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.26 [('1.3.6.1.4.1.1466.115.121.1.26', 'LDAP_SYNTAX', 'IA5 String', 'RFC4517')]
+  Minimum length: 128
+  OidInfo: ('1.2.840.113549.1.9.1', 'ATTRIBUTE_TYPE', ['email', 'emailAddress'], 'RFC3280')
+, u'employeeNumber': Attribute type: 2.16.840.1.113730.3.1.3
+  Short name: employeeNumber
+  Description: RFC2798: numerically identifies an employee within an organization
+  Single value: True
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: inetOrgPerson
+, u'olcSyncrepl': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.2.0.11
+  Short name: olcSyncrepl
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcDatabaseConfig
+  Extensions:
+    X-ORDERED: VALUES
+, u'deltaRevocationList': Attribute type: 2.5.4.53
+  Short name: deltaRevocationList
+  Description: RFC2256: delta revocation list; use ;binary
+  Single value: False
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.9 [('1.3.6.1.4.1.1466.115.121.1.9', 'LDAP_SYNTAX', 'Certificate List [OBSOLETE]', 'RFC2252')]
+  Optional in: certificationAuthority-V2, deltaCRL, cRLDistributionPoint
+  OidInfo: ('2.5.4.53', 'ATTRIBUTE_TYPE', 'deltaRevocationList', 'RFC4523')
+, u'entryDN': Attribute type: 1.3.6.1.1.20
+  Short name: entryDN
+  Description: DN of the entry
+  Single value: True
+  No user modification: True
+  Usage: Directory operation
+  Equality rule: distinguishedNameMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.12 [('1.3.6.1.4.1.1466.115.121.1.12', 'LDAP_SYNTAX', 'DN', 'RFC4517')]
+  OidInfo: ('1.3.6.1.1.20', 'ATTRIBUTE_TYPE', 'entryDN', 'RFC5020')
+, u'postalAddress': Attribute type: 2.5.4.16
+  Short name: postalAddress
+  Description: RFC2256: postal address
+  Single value: False
+  Equality rule: caseIgnoreListMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.41 [('1.3.6.1.4.1.1466.115.121.1.41', 'LDAP_SYNTAX', 'Postal Address', 'RFC4517')]
+  Optional in: domain, organizationalPerson, RFC822localPart, organizationalRole, residentialPerson, dmd, organizationalUnit, organization
+  OidInfo: ('2.5.4.16', 'ATTRIBUTE_TYPE', 'postalAddress', 'RFC4519')
+, u'modifyTimestamp': Attribute type: 2.5.18.2
+  Short name: modifyTimestamp
+  Description: RFC4512: time which object was last modified
+  Single value: True
+  No user modification: True
+  Usage: Directory operation
+  Equality rule: generalizedTimeMatch
+  Ordering rule: generalizedTimeOrderingMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.24 [('1.3.6.1.4.1.1466.115.121.1.24', 'LDAP_SYNTAX', 'Generalized Time', 'RFC4517')]
+  OidInfo: ('2.5.18.2', 'ATTRIBUTE_TYPE', 'modifyTimestamp', 'RFC4512')
+, u'presentationAddress': Attribute type: 2.5.4.29
+  Short name: presentationAddress
+  Description: RFC2256: presentation address
+  Single value: True
+  Equality rule: presentationAddressMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.43 [('1.3.6.1.4.1.1466.115.121.1.43', 'LDAP_SYNTAX', 'Presentation Address [OBSOLETE]', 'RFC2252')]
+  Mandatory in: applicationEntity
+  OidInfo: ('2.5.4.29', 'ATTRIBUTE_TYPE', 'presentationAddress', 'RFC2256')
+, u'registeredAddress': Attribute type: 2.5.4.26
+  Short name: registeredAddress
+  Description: RFC2256: registered postal address
+  Single value: False
+  Superior: postalAddress
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.41 [('1.3.6.1.4.1.1466.115.121.1.41', 'LDAP_SYNTAX', 'Postal Address', 'RFC4517')]
+  Optional in: domain, organizationalPerson, RFC822localPart, organizationalRole, residentialPerson, dmd, organizationalUnit, organization
+  OidInfo: ('2.5.4.26', 'ATTRIBUTE_TYPE', 'registeredAddress', 'RFC4519')
+, u'memberNisNetgroup': Attribute type: 1.3.6.1.1.1.1.13
+  Short name: memberNisNetgroup
+  Single value: False
+  Equality rule: caseExactIA5Match
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.26 [('1.3.6.1.4.1.1466.115.121.1.26', 'LDAP_SYNTAX', 'IA5 String', 'RFC4517')]
+  Optional in: nisNetgroup
+, u'organizationName': Attribute type: 2.5.4.10
+  Short name: o, organizationName
+  Description: RFC2256: organization this object belongs to
+  Single value: False
+  Superior: name
+  Mandatory in: organization
+  Optional in: domain, groupOfNames, document, groupOfUniqueNames, device, inetOrgPerson, account, documentSeries, applicationEntity
+  OidInfo: ('2.5.4.10', 'ATTRIBUTE_TYPE', 'o, organizationName', 'RFC4519')
+, u'name': Attribute type: 2.5.4.41
+  Short name: name
+  Description: RFC4519: common supertype of name attributes
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Minimum length: 32768
+  OidInfo: ('2.5.4.41', 'ATTRIBUTE_TYPE', 'name', 'RFC4519')
+, u'personalTitle': Attribute type: 0.9.2342.19200300.100.1.40
+  Short name: personalTitle
+  Description: RFC1274: personal title
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Minimum length: 256
+  Optional in: newPilotPerson, pilotPerson
+  OidInfo: ('0.9.2342.19200300.100.1.40', 'ATTRIBUTE_TYPE', 'personalTitle', 'RFC4524')
+, u'olcAttributeOptions': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.5
+  Short name: olcAttributeOptions
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcGlobal
+, u'associatedDomain': Attribute type: 0.9.2342.19200300.100.1.37
+  Short name: associatedDomain
+  Description: RFC1274: domain associated with object
+  Single value: False
+  Equality rule: caseIgnoreIA5Match
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.26 [('1.3.6.1.4.1.1466.115.121.1.26', 'LDAP_SYNTAX', 'IA5 String', 'RFC4517')]
+  Mandatory in: domainRelatedObject
+  OidInfo: ('0.9.2342.19200300.100.1.37', 'ATTRIBUTE_TYPE', 'associatedDomain', 'RFC4524')
+, u'userid': Attribute type: 0.9.2342.19200300.100.1.1
+  Short name: uid, userid
+  Description: RFC4519: user identifier
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Minimum length: 256
+  Mandatory in: shadowAccount, posixAccount, uidObject, account
+  Optional in: inetOrgPerson, newPilotPerson, pilotPerson
+  OidInfo: ('0.9.2342.19200300.100.1.1', 'ATTRIBUTE_TYPE', ['uid', 'userId'], 'RFC4519')
+, u'l': Attribute type: 2.5.4.7
+  Short name: l, localityName
+  Description: RFC2256: locality which this object resides in
+  Single value: False
+  Superior: name
+  Mandatory in: residentialPerson
+  Optional in: domain, organizationalPerson, ipHost, applicationProcess, organizationalRole, locality, residentialPerson, ipNetwork, dmd, document, device, organizationalUnit, account, documentSeries, organization, applicationEntity
+  OidInfo: ('2.5.4.7', 'ATTRIBUTE_TYPE', ['L', 'localityName'], 'RFC4519')
+, u'stateOrProvinceName': Attribute type: 2.5.4.8
+  Short name: st, stateOrProvinceName
+  Description: RFC2256: state or province which this object resides in
+  Single value: False
+  Superior: name
+  Optional in: domain, organizationalPerson, organizationalRole, locality, residentialPerson, dmd, organizationalUnit, organization
+  OidInfo: ('2.5.4.8', 'ATTRIBUTE_TYPE', ['st', 'stateOrProvinceName'], 'RFC4519-RFC2256')
+, u'email': Attribute type: 1.2.840.113549.1.9.1
+  Short name: email, emailAddress, pkcs9email
+  Description: RFC3280: legacy attribute for email addresses in DNs
+  Single value: False
+  Equality rule: caseIgnoreIA5Match
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.26 [('1.3.6.1.4.1.1466.115.121.1.26', 'LDAP_SYNTAX', 'IA5 String', 'RFC4517')]
+  Minimum length: 128
+  OidInfo: ('1.2.840.113549.1.9.1', 'ATTRIBUTE_TYPE', ['email', 'emailAddress'], 'RFC3280')
+, u'pkcs9email': Attribute type: 1.2.840.113549.1.9.1
+  Short name: email, emailAddress, pkcs9email
+  Description: RFC3280: legacy attribute for email addresses in DNs
+  Single value: False
+  Equality rule: caseIgnoreIA5Match
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.26 [('1.3.6.1.4.1.1466.115.121.1.26', 'LDAP_SYNTAX', 'IA5 String', 'RFC4517')]
+  Minimum length: 128
+  OidInfo: ('1.2.840.113549.1.9.1', 'ATTRIBUTE_TYPE', ['email', 'emailAddress'], 'RFC3280')
+, u'olcSaslRealm': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.54
+  Short name: olcSaslRealm
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcGlobal
+, u'departmentNumber': Attribute type: 2.16.840.1.113730.3.1.2
+  Short name: departmentNumber
+  Description: RFC2798: identifies a department within an organization
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: inetOrgPerson
+, u'olcDbNoSync': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.2.1.4
+  Short name: olcDbNoSync
+  Description: Disable synchronous database writes
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.7 [('1.3.6.1.4.1.1466.115.121.1.7', 'LDAP_SYNTAX', 'Boolean', 'RFC4517')]
+  Optional in: olcHdbConfig
+, u'objectClasses': Attribute type: 2.5.21.6
+  Short name: objectClasses
+  Description: RFC4512: object classes
+  Single value: False
+  Usage: Directory operation
+  Equality rule: objectIdentifierFirstComponentMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.37 [('1.3.6.1.4.1.1466.115.121.1.37', 'LDAP_SYNTAX', 'Object Class Description', 'RFC4517')]
+  Optional in: subschema
+  OidInfo: ('2.5.21.6', 'ATTRIBUTE_TYPE', 'objectClasses', 'RFC4512')
+, u'givenName': Attribute type: 2.5.4.42
+  Short name: givenName, gn
+  Description: RFC2256: first name(s) for which the entity is known by
+  Single value: False
+  Superior: name
+  Optional in: inetOrgPerson
+  OidInfo: ('2.5.4.42', 'ATTRIBUTE_TYPE', 'givenName', 'RFC4519')
+, u'olcSubordinate': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.2.0.15
+  Short name: olcSubordinate
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcDatabaseConfig
+, u'secretary': Attribute type: 0.9.2342.19200300.100.1.21
+  Short name: secretary
+  Description: RFC1274: DN of secretary
+  Single value: False
+  Equality rule: distinguishedNameMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.12 [('1.3.6.1.4.1.1466.115.121.1.12', 'LDAP_SYNTAX', 'DN', 'RFC4517')]
+  Optional in: inetOrgPerson, newPilotPerson, pilotPerson
+  OidInfo: ('0.9.2342.19200300.100.1.21', 'ATTRIBUTE_TYPE', 'secretary', 'RFC4524')
+, u'mobileTelephoneNumber': Attribute type: 0.9.2342.19200300.100.1.41
+  Short name: mobile, mobileTelephoneNumber
+  Description: RFC1274: mobile telephone number
+  Single value: False
+  Equality rule: telephoneNumberMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.50 [('1.3.6.1.4.1.1466.115.121.1.50', 'LDAP_SYNTAX', 'Telephone Number', 'RFC4517')]
+  Optional in: inetOrgPerson, newPilotPerson, pilotPerson
+  OidInfo: ('0.9.2342.19200300.100.1.41', 'ATTRIBUTE_TYPE', ['mobile', 'mobileTelephoneNumber'], 'RFC4524')
+, u'x500UniqueIdentifier': Attribute type: 2.5.4.45
+  Short name: x500UniqueIdentifier
+  Description: RFC2256: X.500 unique identifier
+  Single value: False
+  Equality rule: bitStringMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.6 [('1.3.6.1.4.1.1466.115.121.1.6', 'LDAP_SYNTAX', 'Bit String', 'RFC4517')]
+  Optional in: inetOrgPerson
+  OidInfo: ('2.5.4.45', 'ATTRIBUTE_TYPE', 'x500UniqueIdentifier', 'RFC4519')
+, u'ipHostNumber': Attribute type: 1.3.6.1.1.1.1.19
+  Short name: ipHostNumber
+  Description: IP address
+  Single value: False
+  Equality rule: caseIgnoreIA5Match
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.26 [('1.3.6.1.4.1.1466.115.121.1.26', 'LDAP_SYNTAX', 'IA5 String', 'RFC4517')]
+  Minimum length: 128
+  Mandatory in: ipHost
+, u'olcIndexSubstrAnyLen': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.22
+  Short name: olcIndexSubstrAnyLen
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27 [('1.3.6.1.4.1.1466.115.121.1.27', 'LDAP_SYNTAX', 'Integer', 'RFC4517')]
+  Optional in: olcGlobal
+, u'olcLogFile': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.27
+  Short name: olcLogFile
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcGlobal
+, u'macAddress': Attribute type: 1.3.6.1.1.1.1.22
+  Short name: macAddress
+  Description: MAC address
+  Single value: False
+  Equality rule: caseIgnoreIA5Match
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.26 [('1.3.6.1.4.1.1466.115.121.1.26', 'LDAP_SYNTAX', 'IA5 String', 'RFC4517')]
+  Minimum length: 128
+  Optional in: ieee802Device
+, u'nisMapName': Attribute type: 1.3.6.1.1.1.1.26
+  Short name: nisMapName
+  Single value: False
+  Superior: name
+  Mandatory in: nisObject, nisMap
+, u'olcOverlay': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.34
+  Short name: olcOverlay
+  Single value: True
+  Superior: olcDatabase
+  Mandatory in: olcOverlayConfig
+  Extensions:
+    X-ORDERED: SIBLINGS
+, u'olcDbCheckpoint': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.2.1.2
+  Short name: olcDbCheckpoint
+  Description: Database checkpoint interval in kbytes and minutes
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcHdbConfig
+, u'entryUUID': Attribute type: 1.3.6.1.1.16.4
+  Short name: entryUUID
+  Description: UUID of the entry
+  Single value: True
+  No user modification: True
+  Usage: Directory operation
+  Equality rule: UUIDMatch
+  Ordering rule: UUIDOrderingMatch
+  Syntax: 1.3.6.1.1.16.1 [('1.3.6.1.1.16.1', 'LDAP_SYNTAX', 'Universally Unique Identifier (UUID)', 'RFC4530')]
+  OidInfo: ('1.3.6.1.1.16.4', 'ATTRIBUTE_TYPE', 'entryUUID', 'RFC4530')
+, u'olcDbCacheSize': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.2.1.1
+  Short name: olcDbCacheSize
+  Description: Entry cache size in entries
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27 [('1.3.6.1.4.1.1466.115.121.1.27', 'LDAP_SYNTAX', 'Integer', 'RFC4517')]
+  Optional in: olcHdbConfig
+, u'supportedSASLMechanisms': Attribute type: 1.3.6.1.4.1.1466.101.120.14
+  Short name: supportedSASLMechanisms
+  Description: RFC4512: supported SASL mechanisms
+  Single value: False
+  Usage: unknown
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  OidInfo: ('1.3.6.1.4.1.1466.101.120.14', 'ATTRIBUTE_TYPE', 'supportedSASLMechanisms', 'RFC4512')
+, u'street': Attribute type: 2.5.4.9
+  Short name: street, streetAddress
+  Description: RFC2256: street address of this object
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Minimum length: 128
+  Optional in: domain, domain, organizationalPerson, RFC822localPart, organizationalRole, locality, residentialPerson, dmd, organizationalUnit, organization
+  OidInfo: ('2.5.4.9', 'ATTRIBUTE_TYPE', ['street', 'streetAddress'], 'RFC4519-RFC2256')
+, u'dynamicSubtrees': Attribute type: 1.3.6.1.4.1.1466.101.119.4
+  Short name: dynamicSubtrees
+  Description: RFC2589: dynamic subtrees
+  Single value: False
+  No user modification: True
+  Usage: unknown
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.12 [('1.3.6.1.4.1.1466.115.121.1.12', 'LDAP_SYNTAX', 'DN', 'RFC4517')]
+  OidInfo: ('1.3.6.1.4.1.1466.101.119.4', 'ATTRIBUTE_TYPE', 'dynamicSubtrees', 'RFC2589')
+, u'olcModulePath': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.31
+  Short name: olcModulePath
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcModuleList
+, u'structuralObjectClass': Attribute type: 2.5.21.9
+  Short name: structuralObjectClass
+  Description: RFC4512: structural object class of entry
+  Single value: True
+  No user modification: True
+  Usage: Directory operation
+  Equality rule: objectIdentifierMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.38 [('1.3.6.1.4.1.1466.115.121.1.38', 'LDAP_SYNTAX', 'OID', 'RFC4517')]
+  OidInfo: ('2.5.21.9', 'ATTRIBUTE_TYPE', 'structuralObjectClass', 'RFC4512')
+, u'olcLocalSSF': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.26
+  Short name: olcLocalSSF
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27 [('1.3.6.1.4.1.1466.115.121.1.27', 'LDAP_SYNTAX', 'Integer', 'RFC4517')]
+  Optional in: olcGlobal
+, u'x121Address': Attribute type: 2.5.4.24
+  Short name: x121Address
+  Description: RFC2256: X.121 Address
+  Single value: False
+  Equality rule: numericStringMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.36 [('1.3.6.1.4.1.1466.115.121.1.36', 'LDAP_SYNTAX', 'Numeric String', 'RFC4517')]
+  Minimum length: 15
+  Optional in: domain, organizationalPerson, RFC822localPart, organizationalRole, residentialPerson, dmd, organizationalUnit, organization
+  OidInfo: ('2.5.4.24', 'ATTRIBUTE_TYPE', 'x121Address', 'RFC4519')
+, u'supportedAlgorithms': Attribute type: 2.5.4.52
+  Short name: supportedAlgorithms
+  Description: RFC2256: supported algorithms
+  Single value: False
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.49 [('1.3.6.1.4.1.1466.115.121.1.49', 'LDAP_SYNTAX', 'Supported Algorithm [OBSOLETE]', 'RFC2252')]
+  Optional in: userSecurityInformation
+  OidInfo: ('2.5.4.52', 'ATTRIBUTE_TYPE', 'supportedAlgorithms', 'RFC4523')
+, u'supportedLDAPVersion': Attribute type: 1.3.6.1.4.1.1466.101.120.15
+  Short name: supportedLDAPVersion
+  Description: RFC4512: supported LDAP versions
+  Single value: False
+  Usage: unknown
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27 [('1.3.6.1.4.1.1466.115.121.1.27', 'LDAP_SYNTAX', 'Integer', 'RFC4517')]
+  OidInfo: ('1.3.6.1.4.1.1466.101.120.15', 'ATTRIBUTE_TYPE', 'supportedLDAPVersion', 'RFC4512')
+, u'bootParameter': Attribute type: 1.3.6.1.1.1.1.23
+  Short name: bootParameter
+  Description: rpc.bootparamd parameter
+  Single value: False
+  Syntax: 1.3.6.1.1.1.0.1 [None]
+  Optional in: bootableDevice
+, u'olcRootDSE': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.51
+  Short name: olcRootDSE
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcIncludeFile, olcGlobal
+, u'ipServiceProtocol': Attribute type: 1.3.6.1.1.1.1.16
+  Short name: ipServiceProtocol
+  Single value: False
+  Superior: name
+  Mandatory in: ipService
+, u'olcTCPBuffer': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.90
+  Short name: olcTCPBuffer
+  Description: Custom TCP buffer size
+  Single value: False
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcGlobal
+, u'olcIndexSubstrIfMinLen': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.20
+  Short name: olcIndexSubstrIfMinLen
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27 [('1.3.6.1.4.1.1466.115.121.1.27', 'LDAP_SYNTAX', 'Integer', 'RFC4517')]
+  Optional in: olcGlobal
+, u'olcArgsFile': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.3
+  Short name: olcArgsFile
+  Description: File for slapd command line options
+  Single value: True
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcGlobal
+, u'olcDbCacheFree': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.2.1.11
+  Short name: olcDbCacheFree
+  Description: Number of extra entries to free when max is reached
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27 [('1.3.6.1.4.1.1466.115.121.1.27', 'LDAP_SYNTAX', 'Integer', 'RFC4517')]
+  Optional in: olcHdbConfig
+, u'dITRedirect': Attribute type: 0.9.2342.19200300.100.1.54
+  Short name: dITRedirect
+  Description: RFC1274: DIT Redirect
+  Single value: False
+  Equality rule: distinguishedNameMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.12 [('1.3.6.1.4.1.1466.115.121.1.12', 'LDAP_SYNTAX', 'DN', 'RFC4517')]
+  OidInfo: ('0.9.2342.19200300.100.1.54', 'ATTRIBUTE_TYPE', 'dITRedirect', 'RFC1274')
+, u'olcTLSCipherSuite': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.72
+  Short name: olcTLSCipherSuite
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcGlobal
+, u'olcDbChecksum': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.2.1.16
+  Short name: olcDbChecksum
+  Description: Enable database checksum validation
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.7 [('1.3.6.1.4.1.1466.115.121.1.7', 'LDAP_SYNTAX', 'Boolean', 'RFC4517')]
+, u'searchGuide': Attribute type: 2.5.4.14
+  Short name: searchGuide
+  Description: RFC2256: search guide, deprecated by enhancedSearchGuide
+  Single value: False
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.25 [('1.3.6.1.4.1.1466.115.121.1.25', 'LDAP_SYNTAX', 'Guide [OBSOLETE]', 'RFC4517')]
+  Optional in: domain, locality, dmd, organizationalUnit, country, organization
+  OidInfo: ('2.5.4.14', 'ATTRIBUTE_TYPE', 'searchGuide', 'RFC4519')
+, u'ref': Attribute type: 2.16.840.1.113730.3.1.34
+  Short name: ref
+  Description: RFC3296: subordinate referral URL
+  Single value: False
+  Usage: Distributed operation
+  Equality rule: caseExactMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Mandatory in: referral
+  OidInfo: ('2.16.840.1.113730.3.1.34', 'ATTRIBUTE_TYPE', 'ref', 'RFC3296')
+, u'olcDisallows': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.15
+  Short name: olcDisallows
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcGlobal
+, u'olcReplicaArgsFile': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.43
+  Short name: olcReplicaArgsFile
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcDatabaseConfig
+, u'olcDitContentRules': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.16
+  Short name: olcDitContentRules
+  Description: OpenLDAP DIT content rules
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcSchemaConfig, olcGlobal
+  Extensions:
+    X-ORDERED: VALUES
+, u'favouriteDrink': Attribute type: 0.9.2342.19200300.100.1.5
+  Short name: drink, favouriteDrink
+  Description: RFC1274: favorite drink
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Minimum length: 256
+  Optional in: newPilotPerson, pilotPerson
+  OidInfo: ('0.9.2342.19200300.100.1.5', 'ATTRIBUTE_TYPE', ['drink', 'favouriteDrink'], 'RFC4524')
+, u'homePostalAddress': Attribute type: 0.9.2342.19200300.100.1.39
+  Short name: homePostalAddress
+  Description: RFC1274: home postal address
+  Single value: False
+  Equality rule: caseIgnoreListMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.41 [('1.3.6.1.4.1.1466.115.121.1.41', 'LDAP_SYNTAX', 'Postal Address', 'RFC4517')]
+  Optional in: inetOrgPerson, newPilotPerson, pilotPerson
+  OidInfo: ('0.9.2342.19200300.100.1.39', 'ATTRIBUTE_TYPE', 'homePostalAddress', 'RFC4524')
+, u'olcTLSCertificateKeyFile': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.71
+  Short name: olcTLSCertificateKeyFile
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcGlobal
+, u'olcPlugin': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.38
+  Short name: olcPlugin
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcDatabaseConfig
+, u'c': Attribute type: 2.5.4.6
+  Short name: c, countryName
+  Description: RFC2256: ISO-3166 country 2-letter code
+  Single value: True
+  Superior: name
+  Mandatory in: country
+  OidInfo: ('2.5.4.6', 'ATTRIBUTE_TYPE', ['c', 'countryName'], 'RFC4519')
+, u'olcDbCryptFile': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.2.1.13
+  Short name: olcDbCryptFile
+  Description: Pathname of file containing the DB encryption key
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcHdbConfig
+, u'userPKCS12': Attribute type: 2.16.840.1.113730.3.1.216
+  Short name: userPKCS12
+  Description: RFC2798: personal identity information, a PKCS #12 PFX
+  Single value: False
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.5 [('1.3.6.1.4.1.1466.115.121.1.5', 'LDAP_SYNTAX', 'Binary [OBSOLETE]', 'RFC2252')]
+  Optional in: inetOrgPerson
+, u'dnQualifier': Attribute type: 2.5.4.46
+  Short name: dnQualifier
+  Description: RFC2256: DN qualifier
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Ordering rule: caseIgnoreOrderingMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.44 [('1.3.6.1.4.1.1466.115.121.1.44', 'LDAP_SYNTAX', 'Printable String', 'RFC4517')]
+  OidInfo: ('2.5.4.46', 'ATTRIBUTE_TYPE', 'dnQualifier', 'RFC4519')
+, u'organizationalUnitName': Attribute type: 2.5.4.11
+  Short name: ou, organizationalUnitName
+  Description: RFC2256: organizational unit this object belongs to
+  Single value: False
+  Superior: name
+  Mandatory in: organizationalUnit
+  Optional in: organizationalPerson, applicationProcess, organizationalRole, groupOfNames, document, groupOfUniqueNames, device, account, documentSeries, applicationEntity
+  OidInfo: ('2.5.4.11', 'ATTRIBUTE_TYPE', ['ou', 'organizationalUnitName'], 'RFC4519')
+, u'mXRecord': Attribute type: 0.9.2342.19200300.100.1.28
+  Short name: mXRecord
+  Single value: False
+  Equality rule: caseIgnoreIA5Match
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.26 [('1.3.6.1.4.1.1466.115.121.1.26', 'LDAP_SYNTAX', 'IA5 String', 'RFC4517')]
+  Optional in: dNSDomain
+  OidInfo: ('0.9.2342.19200300.100.1.28', 'ATTRIBUTE_TYPE', 'mXRecord', 'RFC1274')
+, u'authorityRevocationList': Attribute type: 2.5.4.38
+  Short name: authorityRevocationList
+  Description: RFC2256: X.509 authority revocation list, use ;binary
+  Single value: False
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.9 [('1.3.6.1.4.1.1466.115.121.1.9', 'LDAP_SYNTAX', 'Certificate List [OBSOLETE]', 'RFC2252')]
+  Mandatory in: certificationAuthority
+  Optional in: pkiCA, cRLDistributionPoint
+  OidInfo: ('2.5.4.38', 'ATTRIBUTE_TYPE', 'authorityRevocationList', 'RFC4523')
+, u'olcWriteTimeout': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.88
+  Short name: olcWriteTimeout
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27 [('1.3.6.1.4.1.1466.115.121.1.27', 'LDAP_SYNTAX', 'Integer', 'RFC4517')]
+  Optional in: olcGlobal
+, u'subschemaSubentry': Attribute type: 2.5.18.10
+  Short name: subschemaSubentry
+  Description: RFC4512: name of controlling subschema entry
+  Single value: True
+  No user modification: True
+  Usage: Directory operation
+  Equality rule: distinguishedNameMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.12 [('1.3.6.1.4.1.1466.115.121.1.12', 'LDAP_SYNTAX', 'DN', 'RFC4517')]
+  OidInfo: ('2.5.18.10', 'ATTRIBUTE_TYPE', 'subschemaSubentry', 'RFC4512')
+, u'olcDbDirectory': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.2.0.1
+  Short name: olcDbDirectory
+  Description: Directory for database content
+  Single value: True
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Mandatory in: olcHdbConfig, olcLdifConfig
+, u'homePhone': Attribute type: 0.9.2342.19200300.100.1.20
+  Short name: homePhone, homeTelephoneNumber
+  Description: RFC1274: home telephone number
+  Single value: False
+  Equality rule: telephoneNumberMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.50 [('1.3.6.1.4.1.1466.115.121.1.50', 'LDAP_SYNTAX', 'Telephone Number', 'RFC4517')]
+  Optional in: inetOrgPerson, newPilotPerson, pilotPerson
+  OidInfo: ('0.9.2342.19200300.100.1.20', 'ATTRIBUTE_TYPE', ['homePhone', 'homeTelephone'], 'RFC4524')
+, u'olcRequires': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.47
+  Short name: olcRequires
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcDatabaseConfig, olcGlobal
+, u'olcDefaultSearchBase': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.14
+  Short name: olcDefaultSearchBase
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.12 [('1.3.6.1.4.1.1466.115.121.1.12', 'LDAP_SYNTAX', 'DN', 'RFC4517')]
+  Optional in: olcFrontendConfig
+, u'sOARecord': Attribute type: 0.9.2342.19200300.100.1.30
+  Short name: sOARecord
+  Single value: False
+  Equality rule: caseIgnoreIA5Match
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.26 [('1.3.6.1.4.1.1466.115.121.1.26', 'LDAP_SYNTAX', 'IA5 String', 'RFC4517')]
+  Optional in: dNSDomain
+  OidInfo: ('0.9.2342.19200300.100.1.30', 'ATTRIBUTE_TYPE', 'sOARecord', 'RFC1274')
+, u'olcSockbufMaxIncoming': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.61
+  Short name: olcSockbufMaxIncoming
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27 [('1.3.6.1.4.1.1466.115.121.1.27', 'LDAP_SYNTAX', 'Integer', 'RFC4517')]
+  Optional in: olcGlobal
+, u'olcTLSDHParamFile': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.77
+  Short name: olcTLSDHParamFile
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcGlobal
+, u'olcSaslAuxprops': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.89
+  Short name: olcSaslAuxprops
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcGlobal
+, u'matchingRuleUse': Attribute type: 2.5.21.8
+  Short name: matchingRuleUse
+  Description: RFC4512: matching rule uses
+  Single value: False
+  Usage: Directory operation
+  Equality rule: objectIdentifierFirstComponentMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.31 [('1.3.6.1.4.1.1466.115.121.1.31', 'LDAP_SYNTAX', 'Matching Rule Use Description', 'RFC4517')]
+  Optional in: subschema
+  OidInfo: ('2.5.21.8', 'ATTRIBUTE_TYPE', 'matchingRuleUse', 'RFC4512')
+, u'olcPasswordHash': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.36
+  Short name: olcPasswordHash
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcGlobal, olcFrontendConfig
+, u'shadowInactive': Attribute type: 1.3.6.1.1.1.1.9
+  Short name: shadowInactive
+  Single value: True
+  Equality rule: integerMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27 [('1.3.6.1.4.1.1466.115.121.1.27', 'LDAP_SYNTAX', 'Integer', 'RFC4517')]
+  Optional in: shadowAccount
+, u'teletexTerminalIdentifier': Attribute type: 2.5.4.22
+  Short name: teletexTerminalIdentifier
+  Description: RFC2256: Teletex Terminal Identifier
+  Single value: False
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.51 [('1.3.6.1.4.1.1466.115.121.1.51', 'LDAP_SYNTAX', 'Teletex Terminal Identifier', 'RFC4517')]
+  Optional in: domain, organizationalPerson, RFC822localPart, organizationalRole, residentialPerson, dmd, organizationalUnit, organization
+  OidInfo: ('2.5.4.22', 'ATTRIBUTE_TYPE', 'teletexTerminalIdentifier', 'RFC4519')
+, u'host': Attribute type: 0.9.2342.19200300.100.1.9
+  Short name: host
+  Description: RFC1274: host computer
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Minimum length: 256
+  Optional in: account
+  OidInfo: ('0.9.2342.19200300.100.1.9', 'ATTRIBUTE_TYPE', 'host', 'RFC4524')
+, u'o': Attribute type: 2.5.4.10
+  Short name: o, organizationName
+  Description: RFC2256: organization this object belongs to
+  Single value: False
+  Superior: name
+  Mandatory in: organization
+  Optional in: domain, groupOfNames, document, groupOfUniqueNames, device, inetOrgPerson, account, documentSeries, applicationEntity
+  OidInfo: ('2.5.4.10', 'ATTRIBUTE_TYPE', 'o, organizationName', 'RFC4519')
+, u'olcAuthIDRewrite': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.6
+  Short name: olcAuthIDRewrite
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcGlobal
+  Extensions:
+    X-ORDERED: VALUES
+, u'cACertificate': Attribute type: 2.5.4.37
+  Short name: cACertificate
+  Description: RFC2256: X.509 CA certificate, use ;binary
+  Single value: False
+  Equality rule: certificateExactMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.8 [('1.3.6.1.4.1.1466.115.121.1.8', 'LDAP_SYNTAX', 'Certificate [OBSOLETE]', 'RFC2252')]
+  Mandatory in: certificationAuthority
+  Optional in: pkiCA
+  OidInfo: ('2.5.4.37', 'ATTRIBUTE_TYPE', 'cACertificate', 'RFC4523')
+, u'olcConcurrency': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.10
+  Short name: olcConcurrency
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27 [('1.3.6.1.4.1.1466.115.121.1.27', 'LDAP_SYNTAX', 'Integer', 'RFC4517')]
+  Optional in: olcGlobal
+, u'olcMaxDerefDepth': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.2.0.6
+  Short name: olcMaxDerefDepth
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27 [('1.3.6.1.4.1.1466.115.121.1.27', 'LDAP_SYNTAX', 'Integer', 'RFC4517')]
+  Optional in: olcDatabaseConfig
+, u'olcObjectIdentifier': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.33
+  Short name: olcObjectIdentifier
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcSchemaConfig, olcGlobal
+  Extensions:
+    X-ORDERED: VALUES
+, u'telexNumber': Attribute type: 2.5.4.21
+  Short name: telexNumber
+  Description: RFC2256: Telex Number
+  Single value: False
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.52 [('1.3.6.1.4.1.1466.115.121.1.52', 'LDAP_SYNTAX', 'Telex Number', 'RFC4517')]
+  Optional in: domain, organizationalPerson, RFC822localPart, organizationalRole, residentialPerson, dmd, organizationalUnit, organization
+  OidInfo: ('2.5.4.21', 'ATTRIBUTE_TYPE', 'telexNumber', 'RFC4519')
+, u'ou': Attribute type: 2.5.4.11
+  Short name: ou, organizationalUnitName
+  Description: RFC2256: organizational unit this object belongs to
+  Single value: False
+  Superior: name
+  Mandatory in: organizationalUnit
+  Optional in: organizationalPerson, applicationProcess, organizationalRole, groupOfNames, document, groupOfUniqueNames, device, account, documentSeries, applicationEntity
+  OidInfo: ('2.5.4.11', 'ATTRIBUTE_TYPE', ['ou', 'organizationalUnitName'], 'RFC4519')
+, u'userPassword': Attribute type: 2.5.4.35
+  Short name: userPassword
+  Description: RFC4519/2307: password of user
+  Single value: False
+  Equality rule: octetStringMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.40 [('1.3.6.1.4.1.1466.115.121.1.40', 'LDAP_SYNTAX', 'Octet String', 'RFC4517')]
+  Minimum length: 128
+  Mandatory in: simpleSecurityObject
+  Optional in: domain, posixGroup, shadowAccount, posixAccount, dmd, organizationalUnit, person, organization
+  OidInfo: ('2.5.4.35', 'ATTRIBUTE_TYPE', 'userPassword', 'RFC4519')
+, u'olcReplica': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.2.0.7
+  Short name: olcReplica
+  Single value: False
+  Superior: labeledURI
+  Equality rule: caseIgnoreMatch
+  Optional in: olcDatabaseConfig
+  Extensions:
+    X-ORDERED: VALUES
+, u'initials': Attribute type: 2.5.4.43
+  Short name: initials
+  Description: RFC2256: initials of some or all of names, but not the surname(s).
+  Single value: False
+  Superior: name
+  Optional in: inetOrgPerson
+  OidInfo: ('2.5.4.43', 'ATTRIBUTE_TYPE', 'initials', 'RFC4519')
+, u'olcMonitoring': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.2.0.18
+  Short name: olcMonitoring
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.7 [('1.3.6.1.4.1.1466.115.121.1.7', 'LDAP_SYNTAX', 'Boolean', 'RFC4517')]
+  Optional in: olcDatabaseConfig
+, u'co': Attribute type: 0.9.2342.19200300.100.1.43
+  Short name: co, friendlyCountryName
+  Description: RFC1274: friendly country name
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Mandatory in: friendlyCountry
+  OidInfo: ('0.9.2342.19200300.100.1.43', 'ATTRIBUTE_TYPE', ['co', 'friendlyCountryName'], 'RFC4524')
+, u'cn': Attribute type: 2.5.4.3
+  Short name: cn, commonName
+  Description: RFC4519: common name(s) for which the entity is known by
+  Single value: False
+  Superior: name
+  Mandatory in: oncRpc, posixGroup, ipProtocol, ipHost, applicationProcess, organizationalRole, ipNetwork, posixAccount, nisObject, groupOfNames, nisNetgroup, groupOfUniqueNames, ipService, device, room, cRLDistributionPoint, documentSeries, person, subentry, applicationEntity
+  Optional in: RFC822localPart, olcIncludeFile, document, OpenLDAProotDSE, LDAProotDSE, olcSchemaConfig, olcGlobal, olcModuleList
+  OidInfo: ('2.5.4.3', 'ATTRIBUTE_TYPE', ['cn', 'commonName'], 'RFC4519')
+, u'ldapSyntaxes': Attribute type: 1.3.6.1.4.1.1466.101.120.16
+  Short name: ldapSyntaxes
+  Description: RFC4512: LDAP syntaxes
+  Single value: False
+  Usage: Directory operation
+  Equality rule: objectIdentifierFirstComponentMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.54 [('1.3.6.1.4.1.1466.115.121.1.54', 'LDAP_SYNTAX', 'LDAP Syntax Description', 'RFC4517')]
+  OidInfo: ('1.3.6.1.4.1.1466.101.120.16', 'ATTRIBUTE_TYPE', 'ldapSyntaxes', 'RFC4512')
+, u'olcObjectClasses': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.32
+  Short name: olcObjectClasses
+  Description: OpenLDAP object classes
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcSchemaConfig, olcGlobal
+  Extensions:
+    X-ORDERED: VALUES
+, u'objectClass': Attribute type: 2.5.4.0
+  Short name: objectClass
+  Description: RFC4512: object classes of the entity
+  Single value: False
+  Equality rule: objectIdentifierMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.38 [('1.3.6.1.4.1.1466.115.121.1.38', 'LDAP_SYNTAX', 'OID', 'RFC4517')]
+  Mandatory in: top
+  OidInfo: ('2.5.4.0', 'ATTRIBUTE_TYPE', 'objectClass', 'RFC4512')
+, u'memberUid': Attribute type: 1.3.6.1.1.1.1.12
+  Short name: memberUid
+  Single value: False
+  Equality rule: caseExactIA5Match
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.26 [('1.3.6.1.4.1.1466.115.121.1.26', 'LDAP_SYNTAX', 'IA5 String', 'RFC4517')]
+  Optional in: posixGroup
+, u'singleLevelQuality': Attribute type: 0.9.2342.19200300.100.1.50
+  Short name: singleLevelQuality
+  Description: RFC1274: Single Level Quality
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.13 [('1.3.6.1.4.1.1466.115.121.1.13', 'LDAP_SYNTAX', 'Data Quality Syntax [OBSOLETE]', 'RFC2252')]
+  OidInfo: ('0.9.2342.19200300.100.1.50', 'ATTRIBUTE_TYPE', 'singleLevelQuality', 'RFC4524')
+, u'olcDbDNcacheSize': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.2.1.12
+  Short name: olcDbDNcacheSize
+  Description: DN cache size
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27 [('1.3.6.1.4.1.1466.115.121.1.27', 'LDAP_SYNTAX', 'Integer', 'RFC4517')]
+  Optional in: olcHdbConfig
+, u'supportedApplicationContext': Attribute type: 2.5.4.30
+  Short name: supportedApplicationContext
+  Description: RFC2256: supported application context
+  Single value: False
+  Equality rule: objectIdentifierMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.38 [('1.3.6.1.4.1.1466.115.121.1.38', 'LDAP_SYNTAX', 'OID', 'RFC4517')]
+  Optional in: applicationEntity
+  OidInfo: ('2.5.4.30', 'ATTRIBUTE_TYPE', 'supportedApplicationContext', 'RFC2256')
+, u'aliasedEntryName': Attribute type: 2.5.4.1
+  Short name: aliasedObjectName, aliasedEntryName
+  Description: RFC4512: name of aliased object
+  Single value: True
+  Equality rule: distinguishedNameMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.12 [('1.3.6.1.4.1.1466.115.121.1.12', 'LDAP_SYNTAX', 'DN', 'RFC4517')]
+  Mandatory in: alias
+  OidInfo: ('2.5.4.1', 'ATTRIBUTE_TYPE', ['aliasedEntryName', 'aliasedObjectName'], 'X.501-RFC4512')
+, u'generationQualifier': Attribute type: 2.5.4.44
+  Short name: generationQualifier
+  Description: RFC2256: name qualifier indicating a generation
+  Single value: False
+  Superior: name
+  OidInfo: ('2.5.4.44', 'ATTRIBUTE_TYPE', 'generationQualifier', 'RFC4519')
+, u'olcTLSCertificateFile': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.70
+  Short name: olcTLSCertificateFile
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcGlobal
+, u'localityName': Attribute type: 2.5.4.7
+  Short name: l, localityName
+  Description: RFC2256: locality which this object resides in
+  Single value: False
+  Superior: name
+  Mandatory in: residentialPerson
+  Optional in: domain, organizationalPerson, ipHost, applicationProcess, organizationalRole, locality, residentialPerson, ipNetwork, dmd, document, device, organizationalUnit, account, documentSeries, organization, applicationEntity
+  OidInfo: ('2.5.4.7', 'ATTRIBUTE_TYPE', ['L', 'localityName'], 'RFC4519')
+, u'olcTLSCRLFile': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.82
+  Short name: olcTLSCRLFile
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcGlobal
+, u'owner': Attribute type: 2.5.4.32
+  Short name: owner
+  Description: RFC2256: owner (of the object)
+  Single value: False
+  Superior: distinguishedName
+  Optional in: groupOfNames, groupOfUniqueNames, device
+  OidInfo: ('2.5.4.32', 'ATTRIBUTE_TYPE', 'owner', 'RFC4519')
+, u'uniqueIdentifier': Attribute type: 0.9.2342.19200300.100.1.44
+  Short name: uniqueIdentifier
+  Description: RFC1274: unique identifer
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Minimum length: 256
+  OidInfo: ('0.9.2342.19200300.100.1.44', 'ATTRIBUTE_TYPE', 'uniqueIdentifier', 'RFC4524')
+, u'shadowExpire': Attribute type: 1.3.6.1.1.1.1.10
+  Short name: shadowExpire
+  Single value: True
+  Equality rule: integerMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27 [('1.3.6.1.4.1.1466.115.121.1.27', 'LDAP_SYNTAX', 'Integer', 'RFC4517')]
+  Optional in: shadowAccount
+, u'matchingRules': Attribute type: 2.5.21.4
+  Short name: matchingRules
+  Description: RFC4512: matching rules
+  Single value: False
+  Usage: Directory operation
+  Equality rule: objectIdentifierFirstComponentMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.30 [('1.3.6.1.4.1.1466.115.121.1.30', 'LDAP_SYNTAX', 'Matching Rule Description', 'RFC4517')]
+  Optional in: subschema
+  OidInfo: ('2.5.21.4', 'ATTRIBUTE_TYPE', 'matchingRules', 'RFC4512')
+, u'certificateRevocationList': Attribute type: 2.5.4.39
+  Short name: certificateRevocationList
+  Description: RFC2256: X.509 certificate revocation list, use ;binary
+  Single value: False
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.9 [('1.3.6.1.4.1.1466.115.121.1.9', 'LDAP_SYNTAX', 'Certificate List [OBSOLETE]', 'RFC2252')]
+  Mandatory in: certificationAuthority
+  Optional in: pkiCA, cRLDistributionPoint
+  OidInfo: ('2.5.4.39', 'ATTRIBUTE_TYPE', 'certificateRevocationList', 'RFC4523')
+, u'altServer': Attribute type: 1.3.6.1.4.1.1466.101.120.6
+  Short name: altServer
+  Description: RFC4512: alternative servers
+  Single value: False
+  Usage: unknown
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.26 [('1.3.6.1.4.1.1466.115.121.1.26', 'LDAP_SYNTAX', 'IA5 String', 'RFC4517')]
+  OidInfo: ('1.3.6.1.4.1.1466.101.120.6', 'ATTRIBUTE_TYPE', 'altServer', 'RFC4512')
+, u'aliasedObjectName': Attribute type: 2.5.4.1
+  Short name: aliasedObjectName, aliasedEntryName
+  Description: RFC4512: name of aliased object
+  Single value: True
+  Equality rule: distinguishedNameMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.12 [('1.3.6.1.4.1.1466.115.121.1.12', 'LDAP_SYNTAX', 'DN', 'RFC4517')]
+  Mandatory in: alias
+  OidInfo: ('2.5.4.1', 'ATTRIBUTE_TYPE', ['aliasedEntryName', 'aliasedObjectName'], 'X.501-RFC4512')
+, u'olcToolThreads': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.80
+  Short name: olcToolThreads
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27 [('1.3.6.1.4.1.1466.115.121.1.27', 'LDAP_SYNTAX', 'Integer', 'RFC4517')]
+  Optional in: olcGlobal
+, u'olcLdapSyntaxes': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.85
+  Short name: olcLdapSyntaxes
+  Description: OpenLDAP ldapSyntax
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcSchemaConfig, olcGlobal
+  Extensions:
+    X-ORDERED: VALUES
+, u'pagerTelephoneNumber': Attribute type: 0.9.2342.19200300.100.1.42
+  Short name: pager, pagerTelephoneNumber
+  Description: RFC1274: pager telephone number
+  Single value: False
+  Equality rule: telephoneNumberMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.50 [('1.3.6.1.4.1.1466.115.121.1.50', 'LDAP_SYNTAX', 'Telephone Number', 'RFC4517')]
+  Optional in: inetOrgPerson, newPilotPerson, pilotPerson
+  OidInfo: ('0.9.2342.19200300.100.1.42', 'ATTRIBUTE_TYPE', ['pager', 'pagerTelephoneNumber'], 'RFC4524')
+, u'userCertificate': Attribute type: 2.5.4.36
+  Short name: userCertificate
+  Description: RFC2256: X.509 user certificate, use ;binary
+  Single value: False
+  Equality rule: certificateExactMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.8 [('1.3.6.1.4.1.1466.115.121.1.8', 'LDAP_SYNTAX', 'Certificate [OBSOLETE]', 'RFC2252')]
+  Mandatory in: strongAuthenticationUser
+  Optional in: inetOrgPerson, pkiUser
+  OidInfo: ('2.5.4.36', 'ATTRIBUTE_TYPE', 'userCertificate', 'RFC4523')
+, u'creatorsName': Attribute type: 2.5.18.3
+  Short name: creatorsName
+  Description: RFC4512: name of creator
+  Single value: True
+  No user modification: True
+  Usage: Directory operation
+  Equality rule: distinguishedNameMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.12 [('1.3.6.1.4.1.1466.115.121.1.12', 'LDAP_SYNTAX', 'DN', 'RFC4517')]
+  OidInfo: ('2.5.18.3', 'ATTRIBUTE_TYPE', 'creatorsName', 'RFC4512')
+, u'loginShell': Attribute type: 1.3.6.1.1.1.1.4
+  Short name: loginShell
+  Description: The path to the login shell
+  Single value: True
+  Equality rule: caseExactIA5Match
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.26 [('1.3.6.1.4.1.1466.115.121.1.26', 'LDAP_SYNTAX', 'IA5 String', 'RFC4517')]
+  Optional in: posixAccount
+, u'olcTLSCACertificateFile': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.68
+  Short name: olcTLSCACertificateFile
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcGlobal
+, u'associatedName': Attribute type: 0.9.2342.19200300.100.1.38
+  Short name: associatedName
+  Description: RFC1274: DN of entry associated with domain
+  Single value: False
+  Equality rule: distinguishedNameMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.12 [('1.3.6.1.4.1.1466.115.121.1.12', 'LDAP_SYNTAX', 'DN', 'RFC4517')]
+  Optional in: domain
+  OidInfo: ('0.9.2342.19200300.100.1.38', 'ATTRIBUTE_TYPE', 'associatedName', 'RFC4524')
+, u'ipServicePort': Attribute type: 1.3.6.1.1.1.1.15
+  Short name: ipServicePort
+  Single value: True
+  Equality rule: integerMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27 [('1.3.6.1.4.1.1466.115.121.1.27', 'LDAP_SYNTAX', 'Integer', 'RFC4517')]
+  Mandatory in: ipService
+, u'supportedExtension': Attribute type: 1.3.6.1.4.1.1466.101.120.7
+  Short name: supportedExtension
+  Description: RFC4512: supported extended operations
+  Single value: False
+  Usage: unknown
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.38 [('1.3.6.1.4.1.1466.115.121.1.38', 'LDAP_SYNTAX', 'OID', 'RFC4517')]
+  OidInfo: ('1.3.6.1.4.1.1466.101.120.7', 'ATTRIBUTE_TYPE', 'supportedExtension', 'RFC4512')
+, u'buildingName': Attribute type: 0.9.2342.19200300.100.1.48
+  Short name: buildingName
+  Description: RFC1274: name of building
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Minimum length: 256
+  Optional in: pilotOrganization
+  OidInfo: ('0.9.2342.19200300.100.1.48', 'ATTRIBUTE_TYPE', 'buildingName', 'RFC4524')
+, u'internationaliSDNNumber': Attribute type: 2.5.4.25
+  Short name: internationaliSDNNumber
+  Description: RFC2256: international ISDN number
+  Single value: False
+  Equality rule: numericStringMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.36 [('1.3.6.1.4.1.1466.115.121.1.36', 'LDAP_SYNTAX', 'Numeric String', 'RFC4517')]
+  Minimum length: 16
+  Optional in: domain, organizationalPerson, RFC822localPart, organizationalRole, residentialPerson, dmd, organizationalUnit, organization
+  OidInfo: ('2.5.4.25', 'ATTRIBUTE_TYPE', 'internationaliSDNNumber', 'RFC4519')
+, u'uniqueMember': Attribute type: 2.5.4.50
+  Short name: uniqueMember
+  Description: RFC2256: unique member of a group
+  Single value: False
+  Equality rule: uniqueMemberMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.34 [('1.3.6.1.4.1.1466.115.121.1.34', 'LDAP_SYNTAX', 'Name And Optional UID', 'RFC4517')]
+  Mandatory in: groupOfUniqueNames
+  OidInfo: ('2.5.4.50', 'ATTRIBUTE_TYPE', 'uniqueMember', 'RFC4519')
+, u'organizationalStatus': Attribute type: 0.9.2342.19200300.100.1.45
+  Short name: organizationalStatus
+  Description: RFC1274: organizational status
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Minimum length: 256
+  Optional in: newPilotPerson, pilotPerson
+  OidInfo: ('0.9.2342.19200300.100.1.45', 'ATTRIBUTE_TYPE', 'organizationalStatus', 'RFC4524')
+, u'telephoneNumber': Attribute type: 2.5.4.20
+  Short name: telephoneNumber
+  Description: RFC2256: Telephone Number
+  Single value: False
+  Equality rule: telephoneNumberMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.50 [('1.3.6.1.4.1.1466.115.121.1.50', 'LDAP_SYNTAX', 'Telephone Number', 'RFC4517')]
+  Minimum length: 32
+  Optional in: domain, organizationalPerson, RFC822localPart, RFC822localPart, organizationalRole, residentialPerson, dmd, organizationalUnit, room, documentSeries, person, organization
+  OidInfo: ('2.5.4.20', 'ATTRIBUTE_TYPE', 'telephoneNumber', 'RFC4519')
+, u'enhancedSearchGuide': Attribute type: 2.5.4.47
+  Short name: enhancedSearchGuide
+  Description: RFC2256: enhanced search guide
+  Single value: False
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.21 [('1.3.6.1.4.1.1466.115.121.1.21', 'LDAP_SYNTAX', 'Enhanced Guide', 'RFC4517')]
+  OidInfo: ('2.5.4.47', 'ATTRIBUTE_TYPE', 'enhancedSearchGuide', 'RFC4519')
+, u'olcSockbufMaxIncomingAuth': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.62
+  Short name: olcSockbufMaxIncomingAuth
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27 [('1.3.6.1.4.1.1466.115.121.1.27', 'LDAP_SYNTAX', 'Integer', 'RFC4517')]
+  Optional in: olcGlobal
+, u'preferredDeliveryMethod': Attribute type: 2.5.4.28
+  Short name: preferredDeliveryMethod
+  Description: RFC2256: preferred delivery method
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.14 [('1.3.6.1.4.1.1466.115.121.1.14', 'LDAP_SYNTAX', 'Delivery Method', 'RFC4517')]
+  Optional in: domain, organizationalPerson, RFC822localPart, organizationalRole, organizationalRole, residentialPerson, residentialPerson, dmd, organizationalUnit, newPilotPerson, organization, pilotPerson
+  OidInfo: ('2.5.4.28', 'ATTRIBUTE_TYPE', 'preferredDeliveryMethod', 'RFC4519')
+, u'olcDbPageSize': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.2.1.15
+  Short name: olcDbPageSize
+  Description: Page size of specified DB, in Kbytes
+  Single value: False
+  Equality rule: caseExactMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcHdbConfig
+, u'olcSaslHost': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.53
+  Short name: olcSaslHost
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcGlobal
+, u'physicalDeliveryOfficeName': Attribute type: 2.5.4.19
+  Short name: physicalDeliveryOfficeName
+  Description: RFC2256: Physical Delivery Office Name
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Minimum length: 128
+  Optional in: domain, organizationalPerson, RFC822localPart, organizationalRole, residentialPerson, dmd, organizationalUnit, organization
+  OidInfo: ('2.5.4.19', 'ATTRIBUTE_TYPE', 'physicalDeliveryOfficeName', 'RFC4519')
+, u'gidNumber': Attribute type: 1.3.6.1.1.1.1.1
+  Short name: gidNumber
+  Description: RFC2307: An integer uniquely identifying a group in an administrative domain
+  Single value: True
+  Equality rule: integerMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27 [('1.3.6.1.4.1.1466.115.121.1.27', 'LDAP_SYNTAX', 'Integer', 'RFC4517')]
+  Mandatory in: posixGroup, posixAccount
+, u'olcConfigFile': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.78
+  Short name: olcConfigFile
+  Description: File for slapd configuration directives
+  Single value: True
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcGlobal
+, u'olcRootPW': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.2.0.9
+  Short name: olcRootPW
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcDatabaseConfig
+, u'mail': Attribute type: 0.9.2342.19200300.100.1.3
+  Short name: mail, rfc822Mailbox
+  Description: RFC1274: RFC822 Mailbox
+  Single value: False
+  Equality rule: caseIgnoreIA5Match
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.26 [('1.3.6.1.4.1.1466.115.121.1.26', 'LDAP_SYNTAX', 'IA5 String', 'RFC4517')]
+  Minimum length: 256
+  Optional in: inetOrgPerson, newPilotPerson, pilotPerson
+  OidInfo: ('0.9.2342.19200300.100.1.3', 'ATTRIBUTE_TYPE', ['mail', 'RFC822Mailbox'], 'RFC4524')
+, u'olcAddContentAcl': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.86
+  Short name: olcAddContentAcl
+  Description: Check ACLs against content of Add ops
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.7 [('1.3.6.1.4.1.1466.115.121.1.7', 'LDAP_SYNTAX', 'Boolean', 'RFC4517')]
+  Optional in: olcDatabaseConfig
+, u'olcMirrorMode': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.2.0.16
+  Short name: olcMirrorMode
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.7 [('1.3.6.1.4.1.1466.115.121.1.7', 'LDAP_SYNTAX', 'Boolean', 'RFC4517')]
+  Optional in: olcDatabaseConfig
+, u'aRecord': Attribute type: 0.9.2342.19200300.100.1.26
+  Short name: aRecord
+  Single value: False
+  Equality rule: caseIgnoreIA5Match
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.26 [('1.3.6.1.4.1.1466.115.121.1.26', 'LDAP_SYNTAX', 'IA5 String', 'RFC4517')]
+  Optional in: dNSDomain
+  OidInfo: ('0.9.2342.19200300.100.1.26', 'ATTRIBUTE_TYPE', 'aRecord', 'RFC1274')
+, u'olcConfigDir': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.79
+  Short name: olcConfigDir
+  Description: Directory for slapd configuration backend
+  Single value: True
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcGlobal
+, u'displayName': Attribute type: 2.16.840.1.113730.3.1.241
+  Short name: displayName
+  Description: RFC2798: preferred name to be used when displaying entries
+  Single value: True
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: inetOrgPerson
+, u'info': Attribute type: 0.9.2342.19200300.100.1.4
+  Short name: info
+  Description: RFC1274: general information
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Minimum length: 2048
+  OidInfo: ('0.9.2342.19200300.100.1.4', 'ATTRIBUTE_TYPE', 'info', 'RFC4524')
+, u'nisNetgroupTriple': Attribute type: 1.3.6.1.1.1.1.14
+  Short name: nisNetgroupTriple
+  Description: Netgroup triple
+  Single value: False
+  Syntax: 1.3.6.1.1.1.0.0 [None]
+  Optional in: nisNetgroup
+, u'ipProtocolNumber': Attribute type: 1.3.6.1.1.1.1.17
+  Short name: ipProtocolNumber
+  Single value: True
+  Equality rule: integerMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27 [('1.3.6.1.4.1.1466.115.121.1.27', 'LDAP_SYNTAX', 'Integer', 'RFC4517')]
+  Mandatory in: ipProtocol
+, u'olcSaslSecProps': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.56
+  Short name: olcSaslSecProps
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcGlobal
+, u'olcConnMaxPending': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.11
+  Short name: olcConnMaxPending
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27 [('1.3.6.1.4.1.1466.115.121.1.27', 'LDAP_SYNTAX', 'Integer', 'RFC4517')]
+  Optional in: olcGlobal
+, u'olcSuffix': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.2.0.10
+  Short name: olcSuffix
+  Single value: False
+  Equality rule: distinguishedNameMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.12 [('1.3.6.1.4.1.1466.115.121.1.12', 'LDAP_SYNTAX', 'DN', 'RFC4517')]
+  Optional in: olcDatabaseConfig
+, u'friendlyCountryName': Attribute type: 0.9.2342.19200300.100.1.43
+  Short name: co, friendlyCountryName
+  Description: RFC1274: friendly country name
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Mandatory in: friendlyCountry
+  OidInfo: ('0.9.2342.19200300.100.1.43', 'ATTRIBUTE_TYPE', ['co', 'friendlyCountryName'], 'RFC4524')
+, u'roomNumber': Attribute type: 0.9.2342.19200300.100.1.6
+  Short name: roomNumber
+  Description: RFC1274: room number
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Minimum length: 256
+  Optional in: inetOrgPerson, room, newPilotPerson, pilotPerson
+  OidInfo: ('0.9.2342.19200300.100.1.6', 'ATTRIBUTE_TYPE', 'roomNumber', 'RFC4524')
+, u'houseIdentifier': Attribute type: 2.5.4.51
+  Short name: houseIdentifier
+  Description: RFC2256: house identifier
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Minimum length: 32768
+  OidInfo: ('2.5.4.51', 'ATTRIBUTE_TYPE', 'houseIdentifier', 'RFC4519')
+, u'olcSchemaDN': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.58
+  Short name: olcSchemaDN
+  Single value: True
+  Equality rule: distinguishedNameMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.12 [('1.3.6.1.4.1.1466.115.121.1.12', 'LDAP_SYNTAX', 'DN', 'RFC4517')]
+  Optional in: olcDatabaseConfig
+, u'olcBackend': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.9
+  Short name: olcBackend
+  Description: A type of backend
+  Single value: True
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Mandatory in: olcBackendConfig
+  Extensions:
+    X-ORDERED: SIBLINGS
+, u'olcPidFile': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.37
+  Short name: olcPidFile
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcGlobal
+, u'gecos': Attribute type: 1.3.6.1.1.1.1.2
+  Short name: gecos
+  Description: The GECOS field; the common name
+  Single value: True
+  Equality rule: caseIgnoreIA5Match
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.26 [('1.3.6.1.4.1.1466.115.121.1.26', 'LDAP_SYNTAX', 'IA5 String', 'RFC4517')]
+  Optional in: posixAccount
+, u'olcLastMod': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.2.0.4
+  Short name: olcLastMod
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.7 [('1.3.6.1.4.1.1466.115.121.1.7', 'LDAP_SYNTAX', 'Boolean', 'RFC4517')]
+  Optional in: olcDatabaseConfig
+, u'supportedControl': Attribute type: 1.3.6.1.4.1.1466.101.120.13
+  Short name: supportedControl
+  Description: RFC4512: supported controls
+  Single value: False
+  Usage: unknown
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.38 [('1.3.6.1.4.1.1466.115.121.1.38', 'LDAP_SYNTAX', 'OID', 'RFC4517')]
+  OidInfo: ('1.3.6.1.4.1.1466.101.120.13', 'ATTRIBUTE_TYPE', 'supportedControl', 'RFC4512')
+, u'olcSortVals': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.83
+  Short name: olcSortVals
+  Description: Attributes whose values will always be sorted
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcFrontendConfig
+, u'destinationIndicator': Attribute type: 2.5.4.27
+  Short name: destinationIndicator
+  Description: RFC2256: destination indicator
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.44 [('1.3.6.1.4.1.1466.115.121.1.44', 'LDAP_SYNTAX', 'Printable String', 'RFC4517')]
+  Minimum length: 128
+  Optional in: domain, organizationalPerson, RFC822localPart, organizationalRole, residentialPerson, dmd, organizationalUnit, organization
+  OidInfo: ('2.5.4.27', 'ATTRIBUTE_TYPE', 'destinationIndicator', 'RFC4519')
+, u'shadowMin': Attribute type: 1.3.6.1.1.1.1.6
+  Short name: shadowMin
+  Single value: True
+  Equality rule: integerMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27 [('1.3.6.1.4.1.1466.115.121.1.27', 'LDAP_SYNTAX', 'Integer', 'RFC4517')]
+  Optional in: shadowAccount
+, u'surname': Attribute type: 2.5.4.4
+  Short name: sn, surname
+  Description: RFC2256: last (family) name(s) for which the entity is known by
+  Single value: False
+  Superior: name
+  Mandatory in: person
+  Optional in: RFC822localPart
+  OidInfo: ('2.5.4.4', 'ATTRIBUTE_TYPE', ['sn', 'surname'], 'RFC4519')
+, u'uid': Attribute type: 0.9.2342.19200300.100.1.1
+  Short name: uid, userid
+  Description: RFC4519: user identifier
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Minimum length: 256
+  Mandatory in: shadowAccount, posixAccount, uidObject, account
+  Optional in: inetOrgPerson, newPilotPerson, pilotPerson
+  OidInfo: ('0.9.2342.19200300.100.1.1', 'ATTRIBUTE_TYPE', ['uid', 'userId'], 'RFC4519')
+, u'subtreeMaximumQuality': Attribute type: 0.9.2342.19200300.100.1.52
+  Short name: subtreeMaximumQuality
+  Description: RFC1274: Subtree Maximun Quality
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.13 [('1.3.6.1.4.1.1466.115.121.1.13', 'LDAP_SYNTAX', 'Data Quality Syntax [OBSOLETE]', 'RFC2252')]
+  Optional in: qualityLabelledData
+  OidInfo: ('0.9.2342.19200300.100.1.52', 'ATTRIBUTE_TYPE', 'subtreeMaximumQuality', 'RFC1274')
+, u'olcDbConfig': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.2.1.3
+  Short name: olcDbConfig
+  Description: BerkeleyDB DB_CONFIG configuration directives
+  Single value: False
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.26 [('1.3.6.1.4.1.1466.115.121.1.26', 'LDAP_SYNTAX', 'IA5 String', 'RFC4517')]
+  Optional in: olcHdbConfig
+  Extensions:
+    X-ORDERED: VALUES
+, u'olcIdleTimeout': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.18
+  Short name: olcIdleTimeout
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27 [('1.3.6.1.4.1.1466.115.121.1.27', 'LDAP_SYNTAX', 'Integer', 'RFC4517')]
+  Optional in: olcGlobal
+, u'namingContexts': Attribute type: 1.3.6.1.4.1.1466.101.120.5
+  Short name: namingContexts
+  Description: RFC4512: naming contexts
+  Single value: False
+  Usage: unknown
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.12 [('1.3.6.1.4.1.1466.115.121.1.12', 'LDAP_SYNTAX', 'DN', 'RFC4517')]
+  OidInfo: ('1.3.6.1.4.1.1466.101.120.5', 'ATTRIBUTE_TYPE', 'namingContexts', 'RFC4512')
+, u'jpegPhoto': Attribute type: 0.9.2342.19200300.100.1.60
+  Short name: jpegPhoto
+  Description: RFC2798: a JPEG image
+  Single value: False
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.28 [('1.3.6.1.4.1.1466.115.121.1.28', 'LDAP_SYNTAX', 'JPEG', 'RFC4517')]
+  Optional in: inetOrgPerson
+  OidInfo: ('0.9.2342.19200300.100.1.60', 'ATTRIBUTE_TYPE', 'jpegPhoto', 'RFC2798')
+, u'uidNumber': Attribute type: 1.3.6.1.1.1.1.0
+  Short name: uidNumber
+  Description: RFC2307: An integer uniquely identifying a user in an administrative domain
+  Single value: True
+  Equality rule: integerMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27 [('1.3.6.1.4.1.1466.115.121.1.27', 'LDAP_SYNTAX', 'Integer', 'RFC4517')]
+  Mandatory in: posixAccount
+, u'mailPreferenceOption': Attribute type: 0.9.2342.19200300.100.1.47
+  Short name: mailPreferenceOption
+  Description: RFC1274: mail preference option
+  Single value: False
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27 [('1.3.6.1.4.1.1466.115.121.1.27', 'LDAP_SYNTAX', 'Integer', 'RFC4517')]
+  Optional in: newPilotPerson, pilotPerson
+  OidInfo: ('0.9.2342.19200300.100.1.47', 'ATTRIBUTE_TYPE', 'mailPreferenceOption', 'RFC1274')
+, u'olcPluginLogFile': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.39
+  Short name: olcPluginLogFile
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcGlobal
+, u'subtreeMinimumQuality': Attribute type: 0.9.2342.19200300.100.1.51
+  Short name: subtreeMinimumQuality
+  Description: RFC1274: Subtree Mininum Quality
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.13 [('1.3.6.1.4.1.1466.115.121.1.13', 'LDAP_SYNTAX', 'Data Quality Syntax [OBSOLETE]', 'RFC2252')]
+  Optional in: qualityLabelledData
+  OidInfo: ('0.9.2342.19200300.100.1.51', 'ATTRIBUTE_TYPE', 'subtreeMinimumQuality', 'RFC1274')
+, u'documentAuthor': Attribute type: 0.9.2342.19200300.100.1.14
+  Short name: documentAuthor
+  Description: RFC1274: DN of author of document
+  Single value: False
+  Equality rule: distinguishedNameMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.12 [('1.3.6.1.4.1.1466.115.121.1.12', 'LDAP_SYNTAX', 'DN', 'RFC4517')]
+  Optional in: document
+  OidInfo: ('0.9.2342.19200300.100.1.14', 'ATTRIBUTE_TYPE', 'documentAuthor', 'RFC4524')
+, u'oncRpcNumber': Attribute type: 1.3.6.1.1.1.1.18
+  Short name: oncRpcNumber
+  Single value: True
+  Equality rule: integerMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27 [('1.3.6.1.4.1.1466.115.121.1.27', 'LDAP_SYNTAX', 'Integer', 'RFC4517')]
+  Mandatory in: oncRpc
+, u'documentLocation': Attribute type: 0.9.2342.19200300.100.1.15
+  Short name: documentLocation
+  Description: RFC1274: location of document original
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Minimum length: 256
+  Optional in: document
+  OidInfo: ('0.9.2342.19200300.100.1.15', 'ATTRIBUTE_TYPE', 'documentLocation', 'RFC4524')
+, u'olcReplogFile': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.46
+  Short name: olcReplogFile
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcDatabaseConfig, olcGlobal
+, u'supportedFeatures': Attribute type: 1.3.6.1.4.1.4203.1.3.5
+  Short name: supportedFeatures
+  Description: RFC4512: features supported by the server
+  Single value: False
+  Usage: unknown
+  Equality rule: objectIdentifierMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.38 [('1.3.6.1.4.1.1466.115.121.1.38', 'LDAP_SYNTAX', 'OID', 'RFC4517')]
+  OidInfo: ('1.3.6.1.4.1.4203.1.3.5', 'ATTRIBUTE_TYPE', 'supportedFeatures', 'RFC4512')
+, u'shadowLastChange': Attribute type: 1.3.6.1.1.1.1.5
+  Short name: shadowLastChange
+  Single value: True
+  Equality rule: integerMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27 [('1.3.6.1.4.1.1466.115.121.1.27', 'LDAP_SYNTAX', 'Integer', 'RFC4517')]
+  Optional in: shadowAccount
+, u'userClass': Attribute type: 0.9.2342.19200300.100.1.8
+  Short name: userClass
+  Description: RFC1274: category of user
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Minimum length: 256
+  Optional in: newPilotPerson, pilotPerson
+  OidInfo: ('0.9.2342.19200300.100.1.8', 'ATTRIBUTE_TYPE', 'userClass', 'RFC4524')
+, u'protocolInformation': Attribute type: 2.5.4.48
+  Short name: protocolInformation
+  Description: RFC2256: protocol information
+  Single value: False
+  Equality rule: protocolInformationMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.42 [('1.3.6.1.4.1.1466.115.121.1.42', 'LDAP_SYNTAX', 'Protocol Information [OBSOLETE]', 'RFC2252')]
+  OidInfo: ('2.5.4.48', 'ATTRIBUTE_TYPE', 'protocolInformation', 'RFC2256')
+, u'distinguishedName': Attribute type: 2.5.4.49
+  Short name: distinguishedName
+  Description: RFC4519: common supertype of DN attributes
+  Single value: False
+  Equality rule: distinguishedNameMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.12 [('1.3.6.1.4.1.1466.115.121.1.12', 'LDAP_SYNTAX', 'DN', 'RFC4517')]
+  OidInfo: ('2.5.4.49', 'ATTRIBUTE_TYPE', 'distinguishedName', 'RFC4519')
+, u'hasSubordinates': Attribute type: 2.5.18.9
+  Short name: hasSubordinates
+  Description: X.501: entry has children
+  Single value: True
+  No user modification: True
+  Usage: Directory operation
+  Equality rule: booleanMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.7 [('1.3.6.1.4.1.1466.115.121.1.7', 'LDAP_SYNTAX', 'Boolean', 'RFC4517')]
+, u'olcRootDN': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.2.0.8
+  Short name: olcRootDN
+  Single value: True
+  Equality rule: distinguishedNameMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.12 [('1.3.6.1.4.1.1466.115.121.1.12', 'LDAP_SYNTAX', 'DN', 'RFC4517')]
+  Optional in: olcDatabaseConfig
+, u'documentIdentifier': Attribute type: 0.9.2342.19200300.100.1.11
+  Short name: documentIdentifier
+  Description: RFC1274: unique identifier of document
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Minimum length: 256
+  Mandatory in: document
+  OidInfo: ('0.9.2342.19200300.100.1.11', 'ATTRIBUTE_TYPE', 'documentIdentifier', 'RFC4524')
+, u'olcPasswordCryptSaltFormat': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.35
+  Short name: olcPasswordCryptSaltFormat
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcGlobal
+, u'carLicense': Attribute type: 2.16.840.1.113730.3.1.1
+  Short name: carLicense
+  Description: RFC2798: vehicle license or registration plate
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: inetOrgPerson
+, u'olcSizeLimit': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.60
+  Short name: olcSizeLimit
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcDatabaseConfig, olcGlobal
+, u'olcLogLevel': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.28
+  Short name: olcLogLevel
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcGlobal
+, u'commonName': Attribute type: 2.5.4.3
+  Short name: cn, commonName
+  Description: RFC4519: common name(s) for which the entity is known by
+  Single value: False
+  Superior: name
+  Mandatory in: oncRpc, posixGroup, ipProtocol, ipHost, applicationProcess, organizationalRole, ipNetwork, posixAccount, nisObject, groupOfNames, nisNetgroup, groupOfUniqueNames, ipService, device, room, cRLDistributionPoint, documentSeries, person, subentry, applicationEntity
+  Optional in: RFC822localPart, olcIncludeFile, document, OpenLDAProotDSE, LDAProotDSE, olcSchemaConfig, olcGlobal, olcModuleList
+  OidInfo: ('2.5.4.3', 'ATTRIBUTE_TYPE', ['cn', 'commonName'], 'RFC4519')
+, u'documentVersion': Attribute type: 0.9.2342.19200300.100.1.13
+  Short name: documentVersion
+  Description: RFC1274: version of document
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Minimum length: 256
+  Optional in: document
+  OidInfo: ('0.9.2342.19200300.100.1.13', 'ATTRIBUTE_TYPE', 'documentVersion', 'RFC4524')
+, u'member': Attribute type: 2.5.4.31
+  Short name: member
+  Description: RFC2256: member of a group
+  Single value: False
+  Superior: distinguishedName
+  Mandatory in: groupOfNames
+  OidInfo: ('2.5.4.31', 'ATTRIBUTE_TYPE', 'member', 'RFC4519')
+, u'streetAddress': Attribute type: 2.5.4.9
+  Short name: street, streetAddress
+  Description: RFC2256: street address of this object
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Minimum length: 128
+  Optional in: domain, domain, organizationalPerson, RFC822localPart, organizationalRole, locality, residentialPerson, dmd, organizationalUnit, organization
+  OidInfo: ('2.5.4.9', 'ATTRIBUTE_TYPE', ['street', 'streetAddress'], 'RFC4519-RFC2256')
+, u'createTimestamp': Attribute type: 2.5.18.1
+  Short name: createTimestamp
+  Description: RFC4512: time which object was created
+  Single value: True
+  No user modification: True
+  Usage: Directory operation
+  Equality rule: generalizedTimeMatch
+  Ordering rule: generalizedTimeOrderingMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.24 [('1.3.6.1.4.1.1466.115.121.1.24', 'LDAP_SYNTAX', 'Generalized Time', 'RFC4517')]
+  OidInfo: ('2.5.18.1', 'ATTRIBUTE_TYPE', 'createTimestamp', 'RFC4512')
+, u'dmdName': Attribute type: 2.5.4.54
+  Short name: dmdName
+  Description: RFC2256: name of DMD
+  Single value: False
+  Superior: name
+  Mandatory in: dmd
+  OidInfo: ('2.5.4.54', 'ATTRIBUTE_TYPE', 'dmdName', 'RFC2256')
+, u'olcDbSearchStack': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.2.1.9
+  Short name: olcDbSearchStack
+  Description: Depth of search stack in IDLs
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27 [('1.3.6.1.4.1.1466.115.121.1.27', 'LDAP_SYNTAX', 'Integer', 'RFC4517')]
+  Optional in: olcHdbConfig
+, u'postalCode': Attribute type: 2.5.4.17
+  Short name: postalCode
+  Description: RFC2256: postal code
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Minimum length: 40
+  Optional in: domain, organizationalPerson, RFC822localPart, organizationalRole, residentialPerson, dmd, organizationalUnit, organization
+  OidInfo: ('2.5.4.17', 'ATTRIBUTE_TYPE', 'postalCode', 'RFC4519')
+, u'olcServerID': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.81
+  Short name: olcServerID
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcGlobal
+, u'vendorName': Attribute type: 1.3.6.1.1.4
+  Short name: vendorName
+  Description: RFC3045: name of implementation vendor
+  Single value: True
+  No user modification: True
+  Usage: unknown
+  Equality rule: caseExactMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+, u'olcUpdateRef': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.2.0.13
+  Short name: olcUpdateRef
+  Single value: False
+  Superior: labeledURI
+  Equality rule: caseIgnoreMatch
+  Optional in: olcDatabaseConfig
+, u'pseudonym': Attribute type: 2.5.4.65
+  Short name: pseudonym
+  Description: X.520(4th): pseudonym for the object
+  Single value: False
+  Superior: name
+  OidInfo: ('2.5.4.65', 'ATTRIBUTE_TYPE', 'pseudonym', 'RFC3280')
+, u'documentPublisher': Attribute type: 0.9.2342.19200300.100.1.56
+  Short name: documentPublisher
+  Description: RFC1274: publisher of document
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: document
+  OidInfo: ('0.9.2342.19200300.100.1.56', 'ATTRIBUTE_TYPE', 'documentPublisher', 'RFC4524')
+, u'olcConnMaxPendingAuth': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.12
+  Short name: olcConnMaxPendingAuth
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27 [('1.3.6.1.4.1.1466.115.121.1.27', 'LDAP_SYNTAX', 'Integer', 'RFC4517')]
+  Optional in: olcGlobal
+, u'homeTelephoneNumber': Attribute type: 0.9.2342.19200300.100.1.20
+  Short name: homePhone, homeTelephoneNumber
+  Description: RFC1274: home telephone number
+  Single value: False
+  Equality rule: telephoneNumberMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.50 [('1.3.6.1.4.1.1466.115.121.1.50', 'LDAP_SYNTAX', 'Telephone Number', 'RFC4517')]
+  Optional in: inetOrgPerson, newPilotPerson, pilotPerson
+  OidInfo: ('0.9.2342.19200300.100.1.20', 'ATTRIBUTE_TYPE', ['homePhone', 'homeTelephone'], 'RFC4524')
+, u'olcDatabase': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.13
+  Short name: olcDatabase
+  Description: The backend type for a database instance
+  Single value: True
+  Superior: olcBackend
+  Mandatory in: olcDatabaseConfig
+  Extensions:
+    X-ORDERED: SIBLINGS
+, u'description': Attribute type: 2.5.4.13
+  Short name: description
+  Description: RFC4519: descriptive information
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Minimum length: 1024
+  Mandatory in: oncRpc, ipProtocol
+  Optional in: domain, oncRpc, posixGroup, RFC822localPart, ipProtocol, ipHost, applicationProcess, organizationalRole, locality, ipNetwork, shadowAccount, posixAccount, nisObject, dmd, groupOfNames, document, nisNetgroup, groupOfUniqueNames, nisMap, ipService, device, organizationalUnit, room, account, country, documentSeries, person, organization, applicationEntity
+  OidInfo: ('2.5.4.13', 'ATTRIBUTE_TYPE', 'description', 'RFC4519')
+, u'cNAMERecord': Attribute type: 0.9.2342.19200300.100.1.31
+  Short name: cNAMERecord
+  Single value: False
+  Equality rule: caseIgnoreIA5Match
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.26 [('1.3.6.1.4.1.1466.115.121.1.26', 'LDAP_SYNTAX', 'IA5 String', 'RFC4517')]
+  Optional in: dNSDomain
+  OidInfo: ('0.9.2342.19200300.100.1.31', 'ATTRIBUTE_TYPE', 'cNAMERecord', 'RFC1274')
+, u'olcLimits': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.2.0.5
+  Short name: olcLimits
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcDatabaseConfig
+  Extensions:
+    X-ORDERED: VALUES
+, u'olcAttributeTypes': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.4
+  Short name: olcAttributeTypes
+  Description: OpenLDAP attributeTypes
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcSchemaConfig, olcGlobal
+  Extensions:
+    X-ORDERED: VALUES
+, u'drink': Attribute type: 0.9.2342.19200300.100.1.5
+  Short name: drink, favouriteDrink
+  Description: RFC1274: favorite drink
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Minimum length: 256
+  Optional in: newPilotPerson, pilotPerson
+  OidInfo: ('0.9.2342.19200300.100.1.5', 'ATTRIBUTE_TYPE', ['drink', 'favouriteDrink'], 'RFC4524')
+, u'knowledgeInformation': Attribute type: 2.5.4.2
+  Short name: knowledgeInformation
+  Description: RFC2256: knowledge information
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Minimum length: 32768
+  Optional in: dSA
+  OidInfo: ('2.5.4.2', 'ATTRIBUTE_TYPE', 'knowledgeInformation', 'RFC2256')
+, u'olcDbCryptKey': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.2.1.14
+  Short name: olcDbCryptKey
+  Description: DB encryption key
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.40 [('1.3.6.1.4.1.1466.115.121.1.40', 'LDAP_SYNTAX', 'Octet String', 'RFC4517')]
+  Optional in: olcHdbConfig
+, u'dSAQuality': Attribute type: 0.9.2342.19200300.100.1.49
+  Short name: dSAQuality
+  Description: RFC1274: DSA Quality
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.19 [('1.3.6.1.4.1.1466.115.121.1.19', 'LDAP_SYNTAX', 'DSA Quality Syntax [OBSOLETE]', 'RFC2252')]
+  Mandatory in: qualityLabelledData
+  Optional in: pilotDSA
+  OidInfo: ('0.9.2342.19200300.100.1.49', 'ATTRIBUTE_TYPE', 'dSAQuality', 'RFC1274')
+, u'crossCertificatePair': Attribute type: 2.5.4.40
+  Short name: crossCertificatePair
+  Description: RFC2256: X.509 cross certificate pair, use ;binary
+  Single value: False
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.10 [('1.3.6.1.4.1.1466.115.121.1.10', 'LDAP_SYNTAX', 'Certificate Pair [OBSOLETE]', 'RFC2252')]
+  Optional in: pkiCA, certificationAuthority
+  OidInfo: ('2.5.4.40', 'ATTRIBUTE_TYPE', 'crossCertificatePair', 'RFC4523')
+, u'vendorVersion': Attribute type: 1.3.6.1.1.5
+  Short name: vendorVersion
+  Description: RFC3045: version of implementation
+  Single value: True
+  No user modification: True
+  Usage: unknown
+  Equality rule: caseExactMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+, u'olcAuthzRegexp': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.8
+  Short name: olcAuthzRegexp
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcGlobal
+  Extensions:
+    X-ORDERED: VALUES
+, u'olcSyncUseSubentry': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.2.0.19
+  Short name: olcSyncUseSubentry
+  Description: Store sync context in a subentry
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.7 [('1.3.6.1.4.1.1466.115.121.1.7', 'LDAP_SYNTAX', 'Boolean', 'RFC4517')]
+  Optional in: olcDatabaseConfig
+, u'olcIndexSubstrIfMaxLen': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.21
+  Short name: olcIndexSubstrIfMaxLen
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27 [('1.3.6.1.4.1.1466.115.121.1.27', 'LDAP_SYNTAX', 'Integer', 'RFC4517')]
+  Optional in: olcGlobal
+, u'entryTtl': Attribute type: 1.3.6.1.4.1.1466.101.119.3
+  Short name: entryTtl
+  Description: RFC2589: entry time-to-live
+  Single value: True
+  No user modification: True
+  Usage: unknown
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27 [('1.3.6.1.4.1.1466.115.121.1.27', 'LDAP_SYNTAX', 'Integer', 'RFC4517')]
+  OidInfo: ('1.3.6.1.4.1.1466.101.119.3', 'ATTRIBUTE_TYPE', 'entryTtl', 'RFC2589')
+, u'olcSecurity': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.59
+  Short name: olcSecurity
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcDatabaseConfig, olcGlobal
+, u'pager': Attribute type: 0.9.2342.19200300.100.1.42
+  Short name: pager, pagerTelephoneNumber
+  Description: RFC1274: pager telephone number
+  Single value: False
+  Equality rule: telephoneNumberMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.50 [('1.3.6.1.4.1.1466.115.121.1.50', 'LDAP_SYNTAX', 'Telephone Number', 'RFC4517')]
+  Optional in: inetOrgPerson, newPilotPerson, pilotPerson
+  OidInfo: ('0.9.2342.19200300.100.1.42', 'ATTRIBUTE_TYPE', ['pager', 'pagerTelephoneNumber'], 'RFC4524')
+, u'olcReplicationInterval': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.45
+  Short name: olcReplicationInterval
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27 [('1.3.6.1.4.1.1466.115.121.1.27', 'LDAP_SYNTAX', 'Integer', 'RFC4517')]
+  Optional in: olcDatabaseConfig
+, u'olcReverseLookup': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.49
+  Short name: olcReverseLookup
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.7 [('1.3.6.1.4.1.1466.115.121.1.7', 'LDAP_SYNTAX', 'Boolean', 'RFC4517')]
+  Optional in: olcGlobal
+, u'countryName': Attribute type: 2.5.4.6
+  Short name: c, countryName
+  Description: RFC2256: ISO-3166 country 2-letter code
+  Single value: True
+  Superior: name
+  Mandatory in: country
+  OidInfo: ('2.5.4.6', 'ATTRIBUTE_TYPE', ['c', 'countryName'], 'RFC4519')
+, u'janetMailbox': Attribute type: 0.9.2342.19200300.100.1.46
+  Short name: janetMailbox
+  Description: RFC1274: Janet mailbox
+  Single value: False
+  Equality rule: caseIgnoreIA5Match
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.26 [('1.3.6.1.4.1.1466.115.121.1.26', 'LDAP_SYNTAX', 'IA5 String', 'RFC4517')]
+  Minimum length: 256
+  Optional in: newPilotPerson, pilotPerson
+  OidInfo: ('0.9.2342.19200300.100.1.46', 'ATTRIBUTE_TYPE', 'janetMailbox', 'RFC1274')
+, u'shadowWarning': Attribute type: 1.3.6.1.1.1.1.8
+  Short name: shadowWarning
+  Single value: True
+  Equality rule: integerMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27 [('1.3.6.1.4.1.1466.115.121.1.27', 'LDAP_SYNTAX', 'Integer', 'RFC4517')]
+  Optional in: shadowAccount
+, u'businessCategory': Attribute type: 2.5.4.15
+  Short name: businessCategory
+  Description: RFC2256: business category
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Minimum length: 128
+  Optional in: domain, residentialPerson, dmd, groupOfNames, groupOfUniqueNames, inetOrgPerson, organizationalUnit, newPilotPerson, organization, pilotPerson
+  OidInfo: ('2.5.4.15', 'ATTRIBUTE_TYPE', 'businessCategory', 'RFC4519')
+, u'labeledURI': Attribute type: 1.3.6.1.4.1.250.1.57
+  Short name: labeledURI
+  Description: RFC2079: Uniform Resource Identifier with optional label
+  Single value: False
+  Equality rule: caseExactMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: inetOrgPerson, labeledURIObject
+  OidInfo: ('1.3.6.1.4.1.250.1.57', 'ATTRIBUTE_TYPE', 'labeledURI', 'RFC2079')
+, u'mobile': Attribute type: 0.9.2342.19200300.100.1.41
+  Short name: mobile, mobileTelephoneNumber
+  Description: RFC1274: mobile telephone number
+  Single value: False
+  Equality rule: telephoneNumberMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.50 [('1.3.6.1.4.1.1466.115.121.1.50', 'LDAP_SYNTAX', 'Telephone Number', 'RFC4517')]
+  Optional in: inetOrgPerson, newPilotPerson, pilotPerson
+  OidInfo: ('0.9.2342.19200300.100.1.41', 'ATTRIBUTE_TYPE', ['mobile', 'mobileTelephoneNumber'], 'RFC4524')
+, u'serialNumber': Attribute type: 2.5.4.5
+  Short name: serialNumber
+  Description: RFC2256: serial number of the entity
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.44 [('1.3.6.1.4.1.1466.115.121.1.44', 'LDAP_SYNTAX', 'Printable String', 'RFC4517')]
+  Minimum length: 64
+  Optional in: device
+  OidInfo: ('2.5.4.5', 'ATTRIBUTE_TYPE', 'serialNumber', 'RFC4519')
+, u'bootFile': Attribute type: 1.3.6.1.1.1.1.24
+  Short name: bootFile
+  Description: Boot image name
+  Single value: False
+  Equality rule: caseExactIA5Match
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.26 [('1.3.6.1.4.1.1466.115.121.1.26', 'LDAP_SYNTAX', 'IA5 String', 'RFC4517')]
+  Optional in: bootableDevice
+, u'st': Attribute type: 2.5.4.8
+  Short name: st, stateOrProvinceName
+  Description: RFC2256: state or province which this object resides in
+  Single value: False
+  Superior: name
+  Optional in: domain, organizationalPerson, organizationalRole, locality, residentialPerson, dmd, organizationalUnit, organization
+  OidInfo: ('2.5.4.8', 'ATTRIBUTE_TYPE', ['st', 'stateOrProvinceName'], 'RFC4519-RFC2256')
+, u'olcReadOnly': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.40
+  Short name: olcReadOnly
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.7 [('1.3.6.1.4.1.1466.115.121.1.7', 'LDAP_SYNTAX', 'Boolean', 'RFC4517')]
+  Optional in: olcDatabaseConfig, olcGlobal
+, u'olcDbMode': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.2.0.3
+  Short name: olcDbMode
+  Description: Unix permissions of database files
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcHdbConfig
+, u'olcRestrict': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.48
+  Short name: olcRestrict
+  Single value: False
+  Equality rule: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcDatabaseConfig, olcGlobal
+, u'olcTimeLimit': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.67
+  Short name: olcTimeLimit
+  Single value: False
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcDatabaseConfig, olcGlobal
+, u'sn': Attribute type: 2.5.4.4
+  Short name: sn, surname
+  Description: RFC2256: last (family) name(s) for which the entity is known by
+  Single value: False
+  Superior: name
+  Mandatory in: person
+  Optional in: RFC822localPart
+  OidInfo: ('2.5.4.4', 'ATTRIBUTE_TYPE', ['sn', 'surname'], 'RFC4519')
+, u'domainComponent': Attribute type: 0.9.2342.19200300.100.1.25
+  Short name: dc, domainComponent
+  Description: RFC1274/2247: domain component
+  Single value: True
+  Equality rule: caseIgnoreIA5Match
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.26 [('1.3.6.1.4.1.1466.115.121.1.26', 'LDAP_SYNTAX', 'IA5 String', 'RFC4517')]
+  Mandatory in: domain, dcObject
+  OidInfo: ('0.9.2342.19200300.100.1.25', 'ATTRIBUTE_TYPE', ['DC', 'domainComponent'], 'RFC4519')
+, u'userSMIMECertificate': Attribute type: 2.16.840.1.113730.3.1.40
+  Short name: userSMIMECertificate
+  Description: RFC2798: PKCS#7 SignedData used to support S/MIME
+  Single value: False
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.5 [('1.3.6.1.4.1.1466.115.121.1.5', 'LDAP_SYNTAX', 'Binary [OBSOLETE]', 'RFC2252')]
+  Optional in: inetOrgPerson
+, u'olcTLSRandFile': Attribute type: 1.3.6.1.4.1.4203.1.12.2.3.0.74
+  Short name: olcTLSRandFile
+  Single value: True
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15 [('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')]
+  Optional in: olcGlobal
+, u'audio': Attribute type: 0.9.2342.19200300.100.1.55
+  Short name: audio
+  Description: RFC1274: audio (u-law)
+  Single value: False
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.4 [('1.3.6.1.4.1.1466.115.121.1.4', 'LDAP_SYNTAX', 'Audio [OBSOLETE]', 'RFC2252')]
+  Minimum length: 25000
+  Optional in: inetOrgPerson
+  OidInfo: ('0.9.2342.19200300.100.1.55', 'ATTRIBUTE_TYPE', 'audio', 'RFC1274')
+, u'seeAlso': Attribute type: 2.5.4.34
+  Short name: seeAlso
+  Description: RFC4519: DN of related object
+  Single value: False
+  Superior: distinguishedName
+  Optional in: domain, RFC822localPart, applicationProcess, organizationalRole, locality, dmd, groupOfNames, document, groupOfUniqueNames, device, organizationalUnit, room, account, documentSeries, person, organization, applicationEntity
+  OidInfo: ('2.5.4.34', 'ATTRIBUTE_TYPE', 'seeAlso', 'RFC4519')
+}
+  Object classes:{u'userSecurityInformation': Object class: 2.5.6.18
+  Short name: userSecurityInformation
+  Description: RFC2256: a user security information
+  Type: Auxiliary
+  Superior: top
+  May contain attributes: supportedAlgorithms
+  OidInfo: ('2.5.6.18', 'OBJECT_CLASS', 'userSecurityInformation', 'RFC4523')
+, u'domain': Object class: 0.9.2342.19200300.100.4.13
+  Short name: domain
+  Type: Structural
+  Superior: top
+  Must contain attributes: domainComponent
+  May contain attributes: associatedName, organizationName, description, businessCategory, seeAlso, searchGuide, userPassword, localityName, stateOrProvinceName, streetAddress, physicalDeliveryOfficeName, postalAddress, postalCode, postOfficeBox, streetAddress, facsimileTelephoneNumber, internationalISDNNumber, telephoneNumber, teletexTerminalIdentifier, telexNumber, preferredDeliveryMethod, destinationIndicator, registeredAddress, x121Address
+  OidInfo: ('0.9.2342.19200300.100.4.13', 'OBJECT_CLASS', 'domain', 'RFC4524')
+, u'ieee802Device': Object class: 1.3.6.1.1.1.2.11
+  Short name: ieee802Device
+  Description: A device with a MAC address
+  Type: Auxiliary
+  Superior: top
+  May contain attributes: macAddress
+, u'organizationalPerson': Object class: 2.5.6.7
+  Short name: organizationalPerson
+  Description: RFC2256: an organizational person
+  Type: Structural
+  Superior: person
+  May contain attributes: title, x121Address, registeredAddress, destinationIndicator, preferredDeliveryMethod, telexNumber, teletexTerminalIdentifier, telephoneNumber, internationaliSDNNumber, facsimileTelephoneNumber, street, postOfficeBox, postalCode, postalAddress, physicalDeliveryOfficeName, ou, st, l
+  OidInfo: ('2.5.6.7', 'OBJECT_CLASS', 'organizationalPerson', 'RFC4519')
+, u'qualityLabelledData': Object class: 0.9.2342.19200300.100.4.22
+  Short name: qualityLabelledData
+  Type: Auxiliary
+  Superior: top
+  Must contain attributes: dsaQuality
+  May contain attributes: subtreeMinimumQuality, subtreeMaximumQuality
+  OidInfo: ('0.9.2342.19200300.100.4.22', 'OBJECT_CLASS', 'qualityLabelledData', 'RFC1274')
+, u'olcOverlayConfig': Object class: 1.3.6.1.4.1.4203.1.12.2.4.0.5
+  Short name: olcOverlayConfig
+  Description: OpenLDAP Overlay-specific options
+  Type: Structural
+  Superior: olcConfig
+  Must contain attributes: olcOverlay
+, u'oncRpc': Object class: 1.3.6.1.1.1.2.5
+  Short name: oncRpc
+  Description: Abstraction of an ONC/RPC binding
+  Type: Structural
+  Superior: top
+  Must contain attributes: cn, oncRpcNumber, description
+  May contain attributes: description
+, u'olcBackendConfig': Object class: 1.3.6.1.4.1.4203.1.12.2.4.0.3
+  Short name: olcBackendConfig
+  Description: OpenLDAP Backend-specific options
+  Type: Structural
+  Superior: olcConfig
+  Must contain attributes: olcBackend
+, u'olcConfig': Object class: 1.3.6.1.4.1.4203.1.12.2.4.0.0
+  Short name: olcConfig
+  Description: OpenLDAP configuration object
+  Type: Abstract
+  Superior: top
+, u'posixGroup': Object class: 1.3.6.1.1.1.2.2
+  Short name: posixGroup
+  Description: Abstraction of a group of accounts
+  Type: Structural
+  Superior: top
+  Must contain attributes: cn, gidNumber
+  May contain attributes: userPassword, memberUid, description
+, u'RFC822localPart': Object class: 0.9.2342.19200300.100.4.14
+  Short name: RFC822localPart
+  Type: Structural
+  Superior: domain
+  May contain attributes: commonName, surname, description, seeAlso, telephoneNumber, physicalDeliveryOfficeName, postalAddress, postalCode, postOfficeBox, streetAddress, facsimileTelephoneNumber, internationalISDNNumber, telephoneNumber, teletexTerminalIdentifier, telexNumber, preferredDeliveryMethod, destinationIndicator, registeredAddress, x121Address
+  OidInfo: ('0.9.2342.19200300.100.4.14', 'OBJECT_CLASS', 'RFC822LocalPart', 'RFC4524')
+, u'ipProtocol': Object class: 1.3.6.1.1.1.2.4
+  Short name: ipProtocol
+  Description: Abstraction of an IP protocol
+  Type: Structural
+  Superior: top
+  Must contain attributes: cn, ipProtocolNumber, description
+  May contain attributes: description
+, u'ipHost': Object class: 1.3.6.1.1.1.2.6
+  Short name: ipHost
+  Description: Abstraction of a host, an IP device
+  Type: Auxiliary
+  Superior: top
+  Must contain attributes: cn, ipHostNumber
+  May contain attributes: l, description, manager
+, u'applicationProcess': Object class: 2.5.6.11
+  Short name: applicationProcess
+  Description: RFC2256: an application process
+  Type: Structural
+  Superior: top
+  Must contain attributes: cn
+  May contain attributes: seeAlso, ou, l, description
+  OidInfo: ('2.5.6.11', 'OBJECT_CLASS', 'applicationProcess', 'RFC4519')
+, u'organizationalRole': Object class: 2.5.6.8
+  Short name: organizationalRole
+  Description: RFC2256: an organizational role
+  Type: Structural
+  Superior: top
+  Must contain attributes: cn
+  May contain attributes: x121Address, registeredAddress, destinationIndicator, preferredDeliveryMethod, telexNumber, teletexTerminalIdentifier, telephoneNumber, internationaliSDNNumber, facsimileTelephoneNumber, seeAlso, roleOccupant, preferredDeliveryMethod, street, postOfficeBox, postalCode, postalAddress, physicalDeliveryOfficeName, ou, st, l, description
+  OidInfo: ('2.5.6.8', 'OBJECT_CLASS', 'organizationalRole', 'RFC4519')
+, u'pkiCA': Object class: 2.5.6.22
+  Short name: pkiCA
+  Description: RFC2587: PKI certificate authority
+  Type: Auxiliary
+  Superior: top
+  May contain attributes: authorityRevocationList, certificateRevocationList, cACertificate, crossCertificatePair
+  OidInfo: ('2.5.6.22', 'OBJECT_CLASS', 'pkiCA', 'RFC4523')
+, u'locality': Object class: 2.5.6.3
+  Short name: locality
+  Description: RFC2256: a locality
+  Type: Structural
+  Superior: top
+  May contain attributes: street, seeAlso, searchGuide, st, l, description
+  OidInfo: ('2.5.6.3', 'OBJECT_CLASS', 'locality', 'RFC4519')
+, u'dNSDomain': Object class: 0.9.2342.19200300.100.4.15
+  Short name: dNSDomain
+  Type: Structural
+  Superior: domain
+  May contain attributes: ARecord, MDRecord, MXRecord, NSRecord, SOARecord, CNAMERecord
+  OidInfo: ('0.9.2342.19200300.100.4.15', 'OBJECT_CLASS', 'dNSDomain', 'RFC1274')
+, u'top': Object class: 2.5.6.0
+  Short name: top
+  Description: top of the superclass chain
+  Type: Abstract
+  Must contain attributes: objectClass
+  OidInfo: ('2.5.6.0', 'OBJECT_CLASS', 'top', 'RFC4512')
+, u'certificationAuthority-V2': Object class: 2.5.6.16.2
+  Short name: certificationAuthority-V2
+  Type: Auxiliary
+  Superior: certificationAuthority
+  May contain attributes: deltaRevocationList
+  OidInfo: ('2.5.6.16.2', 'OBJECT_CLASS', 'certificationAuthority-V2', 'RFC4523')
+, u'deltaCRL': Object class: 2.5.6.23
+  Short name: deltaCRL
+  Description: RFC2587: PKI user
+  Type: Auxiliary
+  Superior: top
+  May contain attributes: deltaRevocationList
+  OidInfo: ('2.5.6.23', 'OBJECT_CLASS', 'deltaCRL', 'RFC4523')
+, u'pilotDSA': Object class: 0.9.2342.19200300.100.4.21
+  Short name: pilotDSA
+  Type: Structural
+  Superior: dsa
+  May contain attributes: dSAQuality
+  OidInfo: ('0.9.2342.19200300.100.4.21', 'OBJECT_CLASS', 'pilotDSA', 'RFC1274')
+, u'residentialPerson': Object class: 2.5.6.10
+  Short name: residentialPerson
+  Description: RFC2256: an residential person
+  Type: Structural
+  Superior: person
+  Must contain attributes: l
+  May contain attributes: businessCategory, x121Address, registeredAddress, destinationIndicator, preferredDeliveryMethod, telexNumber, teletexTerminalIdentifier, telephoneNumber, internationaliSDNNumber, facsimileTelephoneNumber, preferredDeliveryMethod, street, postOfficeBox, postalCode, postalAddress, physicalDeliveryOfficeName, st, l
+  OidInfo: ('2.5.6.10', 'OBJECT_CLASS', 'residentialPerson', 'RFC4519')
+, u'ipNetwork': Object class: 1.3.6.1.1.1.2.7
+  Short name: ipNetwork
+  Description: Abstraction of an IP network
+  Type: Structural
+  Superior: top
+  Must contain attributes: cn, ipNetworkNumber
+  May contain attributes: ipNetmaskNumber, l, description, manager
+, u'shadowAccount': Object class: 1.3.6.1.1.1.2.1
+  Short name: shadowAccount
+  Description: Additional attributes for shadow passwords
+  Type: Auxiliary
+  Superior: top
+  Must contain attributes: uid
+  May contain attributes: userPassword, shadowLastChange, shadowMin, shadowMax, shadowWarning, shadowInactive, shadowExpire, shadowFlag, description
+, u'posixAccount': Object class: 1.3.6.1.1.1.2.0
+  Short name: posixAccount
+  Description: Abstraction of an account with POSIX attributes
+  Type: Auxiliary
+  Superior: top
+  Must contain attributes: cn, uid, uidNumber, gidNumber, homeDirectory
+  May contain attributes: userPassword, loginShell, gecos, description
+, u'nisObject': Object class: 1.3.6.1.1.1.2.10
+  Short name: nisObject
+  Description: An entry in a NIS map
+  Type: Structural
+  Superior: top
+  Must contain attributes: cn, nisMapEntry, nisMapName
+  May contain attributes: description
+, u'dynamicObject': Object class: 1.3.6.1.4.1.1466.101.119.2
+  Short name: dynamicObject
+  Description: RFC2589: Dynamic Object
+  Type: Auxiliary
+  Superior: top
+  OidInfo: ('1.3.6.1.4.1.1466.101.119.2', 'OBJECT_CLASS', 'dynamicObject', 'RFC2589')
+, u'olcIncludeFile': Object class: 1.3.6.1.4.1.4203.1.12.2.4.0.6
+  Short name: olcIncludeFile
+  Description: OpenLDAP configuration include file
+  Type: Structural
+  Superior: olcConfig
+  Must contain attributes: olcInclude
+  May contain attributes: cn, olcRootDSE
+, u'dmd': Object class: 2.5.6.20
+  Short name: dmd
+  Type: Structural
+  Superior: top
+  Must contain attributes: dmdName
+  May contain attributes: userPassword, searchGuide, seeAlso, businessCategory, x121Address, registeredAddress, destinationIndicator, preferredDeliveryMethod, telexNumber, teletexTerminalIdentifier, telephoneNumber, internationaliSDNNumber, facsimileTelephoneNumber, street, postOfficeBox, postalCode, postalAddress, physicalDeliveryOfficeName, st, l, description
+  OidInfo: ('2.5.6.20', 'OBJECT_CLASS', 'dmd', 'RFC2256')
+, u'groupOfNames': Object class: 2.5.6.9
+  Short name: groupOfNames
+  Description: RFC2256: a group of names (DNs)
+  Type: Structural
+  Superior: top
+  Must contain attributes: member, cn
+  May contain attributes: businessCategory, seeAlso, owner, ou, o, description
+  OidInfo: ('2.5.6.9', 'OBJECT_CLASS', 'groupOfNames', 'RFC4519')
+, u'document': Object class: 0.9.2342.19200300.100.4.6
+  Short name: document
+  Type: Structural
+  Superior: top
+  Must contain attributes: documentIdentifier
+  May contain attributes: commonName, description, seeAlso, localityName, organizationName, organizationalUnitName, documentTitle, documentVersion, documentAuthor, documentLocation, documentPublisher
+  OidInfo: ('0.9.2342.19200300.100.4.6', 'OBJECT_CLASS', 'document', 'RFC4524')
+, u'pilotOrganization': Object class: 0.9.2342.19200300.100.4.20
+  Short name: pilotOrganization
+  Type: Structural
+  Superior: organization, organizationalUnit
+  May contain attributes: buildingName
+  OidInfo: ('0.9.2342.19200300.100.4.20', 'OBJECT_CLASS', 'pilotOrganization', 'RFC1274')
+, u'strongAuthenticationUser': Object class: 2.5.6.15
+  Short name: strongAuthenticationUser
+  Description: RFC2256: a strong authentication user
+  Type: Auxiliary
+  Superior: top
+  Must contain attributes: userCertificate
+  OidInfo: ('2.5.6.15', 'OBJECT_CLASS', 'strongAuthenticationUser', 'RFC4523')
+, u'nisNetgroup': Object class: 1.3.6.1.1.1.2.8
+  Short name: nisNetgroup
+  Description: Abstraction of a netgroup
+  Type: Structural
+  Superior: top
+  Must contain attributes: cn
+  May contain attributes: nisNetgroupTriple, memberNisNetgroup, description
+, u'OpenLDAProotDSE': Object class: 1.3.6.1.4.1.4203.1.4.1
+  Short name: OpenLDAProotDSE, LDAProotDSE
+  Description: OpenLDAP Root DSE object
+  Type: Structural
+  Superior: top
+  May contain attributes: cn
+, u'extensibleObject': Object class: 1.3.6.1.4.1.1466.101.120.111
+  Short name: extensibleObject
+  Description: RFC4512: extensible object
+  Type: Auxiliary
+  Superior: top
+  OidInfo: ('1.3.6.1.4.1.1466.101.120.111', 'OBJECT_CLASS', 'extensibleObject', 'RFC4512')
+, u'olcHdbConfig': Object class: 1.3.6.1.4.1.4203.1.12.2.4.2.1.2
+  Short name: olcHdbConfig
+  Description: HDB backend configuration
+  Type: Structural
+  Superior: olcDatabaseConfig
+  Must contain attributes: olcDbDirectory
+  May contain attributes: olcDbCacheSize, olcDbCheckpoint, olcDbConfig, olcDbCryptFile, olcDbCryptKey, olcDbNoSync, olcDbDirtyRead, olcDbIDLcacheSize, olcDbIndex, olcDbLinearIndex, olcDbLockDetect, olcDbMode, olcDbSearchStack, olcDbShmKey, olcDbCacheFree, olcDbDNcacheSize, olcDbPageSize
+, u'LDAProotDSE': Object class: 1.3.6.1.4.1.4203.1.4.1
+  Short name: OpenLDAProotDSE, LDAProotDSE
+  Description: OpenLDAP Root DSE object
+  Type: Structural
+  Superior: top
+  May contain attributes: cn
+, u'groupOfUniqueNames': Object class: 2.5.6.17
+  Short name: groupOfUniqueNames
+  Description: RFC2256: a group of unique names (DN and Unique Identifier)
+  Type: Structural
+  Superior: top
+  Must contain attributes: uniqueMember, cn
+  May contain attributes: businessCategory, seeAlso, owner, ou, o, description
+  OidInfo: ('2.5.6.17', 'OBJECT_CLASS', 'groupOfUniqueNames', 'RFC4519')
+, u'dcObject': Object class: 1.3.6.1.4.1.1466.344
+  Short name: dcObject
+  Description: RFC2247: domain component object
+  Type: Auxiliary
+  Superior: top
+  Must contain attributes: dc
+  OidInfo: ('1.3.6.1.4.1.1466.344', 'OBJECT_CLASS', 'dcObject', 'RFC4519')
+, u'domainRelatedObject': Object class: 0.9.2342.19200300.100.4.17
+  Short name: domainRelatedObject
+  Description: RFC1274: an object related to an domain
+  Type: Auxiliary
+  Superior: top
+  Must contain attributes: associatedDomain
+  OidInfo: ('0.9.2342.19200300.100.4.17', 'OBJECT_CLASS', 'domainRelatedObject', 'RFC4524')
+, u'bootableDevice': Object class: 1.3.6.1.1.1.2.12
+  Short name: bootableDevice
+  Description: A device with boot parameters
+  Type: Auxiliary
+  Superior: top
+  May contain attributes: bootFile, bootParameter
+, u'certificationAuthority': Object class: 2.5.6.16
+  Short name: certificationAuthority
+  Description: RFC2256: a certificate authority
+  Type: Auxiliary
+  Superior: top
+  Must contain attributes: authorityRevocationList, certificateRevocationList, cACertificate
+  May contain attributes: crossCertificatePair
+  OidInfo: ('2.5.6.16', 'OBJECT_CLASS', 'certificationAuthority', 'RFC4523')
+, u'nisMap': Object class: 1.3.6.1.1.1.2.9
+  Short name: nisMap
+  Description: A generic abstraction of a NIS map
+  Type: Structural
+  Superior: top
+  Must contain attributes: nisMapName
+  May contain attributes: description
+, u'ipService': Object class: 1.3.6.1.1.1.2.3
+  Short name: ipService
+  Description: Abstraction an Internet Protocol service
+  Type: Structural
+  Superior: top
+  Must contain attributes: cn, ipServicePort, ipServiceProtocol
+  May contain attributes: description
+, u'device': Object class: 2.5.6.14
+  Short name: device
+  Description: RFC2256: a device
+  Type: Structural
+  Superior: top
+  Must contain attributes: cn
+  May contain attributes: serialNumber, seeAlso, owner, ou, o, l, description
+  OidInfo: ('2.5.6.14', 'OBJECT_CLASS', 'device', 'RFC4519')
+, u'olcDatabaseConfig': Object class: 1.3.6.1.4.1.4203.1.12.2.4.0.4
+  Short name: olcDatabaseConfig
+  Description: OpenLDAP Database-specific options
+  Type: Structural
+  Superior: olcConfig
+  Must contain attributes: olcDatabase
+  May contain attributes: olcHidden, olcSuffix, olcSubordinate, olcAccess, olcAddContentAcl, olcLastMod, olcLimits, olcMaxDerefDepth, olcPlugin, olcReadOnly, olcReplica, olcReplicaArgsFile, olcReplicaPidFile, olcReplicationInterval, olcReplogFile, olcRequires, olcRestrict, olcRootDN, olcRootPW, olcSchemaDN, olcSecurity, olcSizeLimit, olcSyncUseSubentry, olcSyncrepl, olcTimeLimit, olcUpdateDN, olcUpdateRef, olcMirrorMode, olcMonitoring
+, u'uidObject': Object class: 1.3.6.1.1.3.1
+  Short name: uidObject
+  Description: RFC2377: uid object
+  Type: Auxiliary
+  Superior: top
+  Must contain attributes: uid
+  OidInfo: ('1.3.6.1.1.3.1', 'OBJECT_CLASS', 'uidObject', 'RFC4519')
+, u'inetOrgPerson': Object class: 2.16.840.1.113730.3.2.2
+  Short name: inetOrgPerson
+  Description: RFC2798: Internet Organizational Person
+  Type: Structural
+  Superior: organizationalPerson
+  May contain attributes: audio, businessCategory, carLicense, departmentNumber, displayName, employeeNumber, employeeType, givenName, homePhone, homePostalAddress, initials, jpegPhoto, labeledURI, mail, manager, mobile, o, pager, photo, roomNumber, secretary, uid, userCertificate, x500uniqueIdentifier, preferredLanguage, userSMIMECertificate, userPKCS12
+, u'olcSchemaConfig': Object class: 1.3.6.1.4.1.4203.1.12.2.4.0.2
+  Short name: olcSchemaConfig
+  Description: OpenLDAP schema object
+  Type: Structural
+  Superior: olcConfig
+  May contain attributes: cn, olcObjectIdentifier, olcAttributeTypes, olcObjectClasses, olcDitContentRules, olcLdapSyntaxes
+, u'friendlyCountry': Object class: 0.9.2342.19200300.100.4.18
+  Short name: friendlyCountry
+  Type: Structural
+  Superior: country
+  Must contain attributes: friendlyCountryName
+  OidInfo: ('0.9.2342.19200300.100.4.18', 'OBJECT_CLASS', 'friendlyCountry', 'RFC4524')
+, u'organizationalUnit': Object class: 2.5.6.5
+  Short name: organizationalUnit
+  Description: RFC2256: an organizational unit
+  Type: Structural
+  Superior: top
+  Must contain attributes: ou
+  May contain attributes: userPassword, searchGuide, seeAlso, businessCategory, x121Address, registeredAddress, destinationIndicator, preferredDeliveryMethod, telexNumber, teletexTerminalIdentifier, telephoneNumber, internationaliSDNNumber, facsimileTelephoneNumber, street, postOfficeBox, postalCode, postalAddress, physicalDeliveryOfficeName, st, l, description
+  OidInfo: ('2.5.6.5', 'OBJECT_CLASS', 'organizationalUnit', 'RFC4519')
+, u'room': Object class: 0.9.2342.19200300.100.4.7
+  Short name: room
+  Type: Structural
+  Superior: top
+  Must contain attributes: commonName
+  May contain attributes: roomNumber, description, seeAlso, telephoneNumber
+  OidInfo: ('0.9.2342.19200300.100.4.7', 'OBJECT_CLASS', 'room', 'RFC4524')
+, u'account': Object class: 0.9.2342.19200300.100.4.5
+  Short name: account
+  Type: Structural
+  Superior: top
+  Must contain attributes: userid
+  May contain attributes: description, seeAlso, localityName, organizationName, organizationalUnitName, host
+  OidInfo: ('0.9.2342.19200300.100.4.5', 'OBJECT_CLASS', 'account', 'RFC4524')
+, u'cRLDistributionPoint': Object class: 2.5.6.19
+  Short name: cRLDistributionPoint
+  Type: Structural
+  Superior: top
+  Must contain attributes: cn
+  May contain attributes: certificateRevocationList, authorityRevocationList, deltaRevocationList
+  OidInfo: ('2.5.6.19', 'OBJECT_CLASS', 'cRLDistributionPoint', 'RFC4523')
+, u'olcGlobal': Object class: 1.3.6.1.4.1.4203.1.12.2.4.0.1
+  Short name: olcGlobal
+  Description: OpenLDAP Global configuration options
+  Type: Structural
+  Superior: olcConfig
+  May contain attributes: cn, olcConfigFile, olcConfigDir, olcAllows, olcArgsFile, olcAttributeOptions, olcAuthIDRewrite, olcAuthzPolicy, olcAuthzRegexp, olcConcurrency, olcConnMaxPending, olcConnMaxPendingAuth, olcDisallows, olcGentleHUP, olcIdleTimeout, olcIndexSubstrIfMaxLen, olcIndexSubstrIfMinLen, olcIndexSubstrAnyLen, olcIndexSubstrAnyStep, olcIndexIntLen, olcLocalSSF, olcLogFile, olcLogLevel, olcPasswordCryptSaltFormat, olcPasswordHash, olcPidFile, olcPluginLogFile, olcReadOnly, olcReferral, olcReplogFile, olcRequires, olcRestrict, olcReverseLookup, olcRootDSE, olcSaslAuxprops, olcSaslHost, olcSaslRealm, olcSaslSecProps, olcSecurity, olcServerID, olcSizeLimit, olcSockbufMaxIncoming, olcSockbufMaxIncomingAuth, olcTCPBuffer, olcThreads, olcTimeLimit, olcTLSCACertificateFile, olcTLSCACertificatePath, olcTLSCertificateFile, olcTLSCertificateKeyFile, olcTLSCipherSuite, olcTLSCRLCheck, olcTLSRandFile, olcTLSVerifyClient, olcTLSDHParamFile, olcTLSCRLFile, olcToolThreads, olcWriteTimeout, olcObjectIdentifier, olcAttributeTypes, olcObjectClasses, olcDitContentRules, olcLdapSyntaxes
+, u'simpleSecurityObject': Object class: 0.9.2342.19200300.100.4.19
+  Short name: simpleSecurityObject
+  Description: RFC1274: simple security object
+  Type: Auxiliary
+  Superior: top
+  Must contain attributes: userPassword
+  OidInfo: ('0.9.2342.19200300.100.4.19', 'OBJECT_CLASS', 'simpleSecurityObject', 'RFC4524')
+, u'subschema': Object class: 2.5.20.1
+  Short name: subschema
+  Description: RFC4512: controlling subschema (sub)entry
+  Type: Auxiliary
+  May contain attributes: dITStructureRules, nameForms, dITContentRules, objectClasses, attributeTypes, matchingRules, matchingRuleUse
+  OidInfo: ('2.5.20.1', 'OBJECT_CLASS', 'subschema', 'RFC4512')
+, u'olcFrontendConfig': Object class: 1.3.6.1.4.1.4203.1.12.2.4.0.7
+  Short name: olcFrontendConfig
+  Description: OpenLDAP frontend configuration
+  Type: Auxiliary
+  May contain attributes: olcDefaultSearchBase, olcPasswordHash, olcSortVals
+, u'country': Object class: 2.5.6.2
+  Short name: country
+  Description: RFC2256: a country
+  Type: Structural
+  Superior: top
+  Must contain attributes: c
+  May contain attributes: searchGuide, description
+  OidInfo: ('2.5.6.2', 'OBJECT_CLASS', 'country', 'RFC4519')
+, u'olcLdifConfig': Object class: 1.3.6.1.4.1.4203.1.12.2.4.2.2.1
+  Short name: olcLdifConfig
+  Description: LDIF backend configuration
+  Type: Structural
+  Superior: olcDatabaseConfig
+  Must contain attributes: olcDbDirectory
+, u'labeledURIObject': Object class: 1.3.6.1.4.1.250.3.15
+  Short name: labeledURIObject
+  Description: RFC2079: object that contains the URI attribute type
+  Type: Auxiliary
+  Superior: top
+  May contain attributes: labeledURI
+  OidInfo: ('1.3.6.1.4.1.250.3.15', 'OBJECT_CLASS', 'labeledURIObject', 'RFC2079')
+, u'pkiUser': Object class: 2.5.6.21
+  Short name: pkiUser
+  Description: RFC2587: a PKI user
+  Type: Auxiliary
+  Superior: top
+  May contain attributes: userCertificate
+  OidInfo: ('2.5.6.21', 'OBJECT_CLASS', 'pkiUser', 'RFC4523')
+, u'newPilotPerson': Object class: 0.9.2342.19200300.100.4.4
+  Short name: pilotPerson, newPilotPerson
+  Type: Structural
+  Superior: person
+  May contain attributes: userid, textEncodedORAddress, rfc822Mailbox, favouriteDrink, roomNumber, userClass, homeTelephoneNumber, homePostalAddress, secretary, personalTitle, preferredDeliveryMethod, businessCategory, janetMailbox, otherMailbox, mobileTelephoneNumber, pagerTelephoneNumber, organizationalStatus, mailPreferenceOption, personalSignature
+  OidInfo: ('0.9.2342.19200300.100.4.4', 'OBJECT_CLASS', 'pilotPerson', 'RFC1274')
+, u'alias': Object class: 2.5.6.1
+  Short name: alias
+  Description: RFC4512: an alias
+  Type: Structural
+  Superior: top
+  Must contain attributes: aliasedObjectName
+  OidInfo: ('2.5.6.1', 'OBJECT_CLASS', 'alias', 'RFC4512')
+, u'documentSeries': Object class: 0.9.2342.19200300.100.4.9
+  Short name: documentSeries
+  Type: Structural
+  Superior: top
+  Must contain attributes: commonName
+  May contain attributes: description, seeAlso, telephonenumber, localityName, organizationName, organizationalUnitName
+, u'person': Object class: 2.5.6.6
+  Short name: person
+  Description: RFC2256: a person
+  Type: Structural
+  Superior: top
+  Must contain attributes: sn, cn
+  May contain attributes: userPassword, telephoneNumber, seeAlso, description
+  OidInfo: ('2.5.6.6', 'OBJECT_CLASS', 'person', 'RFC4519')
+, u'subentry': Object class: 2.5.17.0
+  Short name: subentry
+  Description: RFC3672: subentry
+  Type: Structural
+  Superior: top
+  Must contain attributes: cn, subtreeSpecification
+  OidInfo: ('2.5.17.0', 'OBJECT_CLASS', 'subentry', 'RFC3672')
+, u'organization': Object class: 2.5.6.4
+  Short name: organization
+  Description: RFC2256: an organization
+  Type: Structural
+  Superior: top
+  Must contain attributes: o
+  May contain attributes: userPassword, searchGuide, seeAlso, businessCategory, x121Address, registeredAddress, destinationIndicator, preferredDeliveryMethod, telexNumber, teletexTerminalIdentifier, telephoneNumber, internationaliSDNNumber, facsimileTelephoneNumber, street, postOfficeBox, postalCode, postalAddress, physicalDeliveryOfficeName, st, l, description
+  OidInfo: ('2.5.6.4', 'OBJECT_CLASS', 'organization', 'RFC4519')
+, u'pilotPerson': Object class: 0.9.2342.19200300.100.4.4
+  Short name: pilotPerson, newPilotPerson
+  Type: Structural
+  Superior: person
+  May contain attributes: userid, textEncodedORAddress, rfc822Mailbox, favouriteDrink, roomNumber, userClass, homeTelephoneNumber, homePostalAddress, secretary, personalTitle, preferredDeliveryMethod, businessCategory, janetMailbox, otherMailbox, mobileTelephoneNumber, pagerTelephoneNumber, organizationalStatus, mailPreferenceOption, personalSignature
+  OidInfo: ('0.9.2342.19200300.100.4.4', 'OBJECT_CLASS', 'pilotPerson', 'RFC1274')
+, u'referral': Object class: 2.16.840.1.113730.3.2.6
+  Short name: referral
+  Description: namedref: named subordinate referral
+  Type: Structural
+  Superior: top
+  Must contain attributes: ref
+  OidInfo: ('2.16.840.1.113730.3.2.6', 'OBJECT_CLASS', 'referral', 'RFC3296')
+, u'olcModuleList': Object class: 1.3.6.1.4.1.4203.1.12.2.4.0.8
+  Short name: olcModuleList
+  Description: OpenLDAP dynamic module info
+  Type: Structural
+  Superior: olcConfig
+  May contain attributes: cn, olcModulePath, olcModuleLoad
+, u'applicationEntity': Object class: 2.5.6.12
+  Short name: applicationEntity
+  Description: RFC2256: an application entity
+  Type: Structural
+  Superior: top
+  Must contain attributes: presentationAddress, cn
+  May contain attributes: supportedApplicationContext, seeAlso, ou, o, l, description
+  OidInfo: ('2.5.6.12', 'OBJECT_CLASS', 'applicationEntity', 'RFC2256')
+, u'dSA': Object class: 2.5.6.13
+  Short name: dSA
+  Description: RFC2256: a directory system agent (a server)
+  Type: Structural
+  Superior: applicationEntity
+  May contain attributes: knowledgeInformation
+  OidInfo: ('2.5.6.13', 'OBJECT_CLASS', 'dSA', 'RFC2256')
+}
+  Matching rules:{u'caseExactSubstringsMatch': Matching rule: 2.5.13.7
+  Short name: caseExactSubstringsMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.58
+  OidInfo: ('2.5.13.7', 'MATCHING_RULE', 'caseExactSubstringsMatch', 'RFC4517')
+, u'octetStringSubstringsMatch': Matching rule: 2.5.13.19
+  Short name: octetStringSubstringsMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.40
+, u'caseIgnoreListMatch': Matching rule: 2.5.13.11
+  Short name: caseIgnoreListMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.41
+  OidInfo: ('2.5.13.11', 'MATCHING_RULE', 'caseIgnoreListMatch', 'RFC4517')
+, u'rdnMatch': Matching rule: 1.2.36.79672281.1.13.3
+  Short name: rdnMatch
+  Syntax: 1.2.36.79672281.1.5.0
+  OidInfo: ('1.2.36.79672281.1.13.3', 'MATCHING_RULE', 'rdnMatch', 'RFC3687')
+, u'telephoneNumberMatch': Matching rule: 2.5.13.20
+  Short name: telephoneNumberMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.50
+  OidInfo: ('2.5.13.20', 'MATCHING_RULE', 'telephoneNumberMatch', 'RFC4517')
+, u'generalizedTimeOrderingMatch': Matching rule: 2.5.13.28
+  Short name: generalizedTimeOrderingMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.24
+  OidInfo: ('2.5.13.28', 'MATCHING_RULE', 'generalizedTimeOrderingMatch', 'RFC4517')
+, u'bitStringMatch': Matching rule: 2.5.13.16
+  Short name: bitStringMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.6
+  OidInfo: ('2.5.13.16', 'MATCHING_RULE', 'bitStringMatch', 'RFC4517')
+, u'UUIDMatch': Matching rule: 1.3.6.1.1.16.2
+  Short name: UUIDMatch
+  Syntax: 1.3.6.1.1.16.1
+  OidInfo: ('1.3.6.1.1.16.2', 'MATCHING_RULE', 'uuidMatch', 'RFC4530')
+, u'caseExactIA5SubstringsMatch': Matching rule: 1.3.6.1.4.1.4203.1.2.1
+  Short name: caseExactIA5SubstringsMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.26
+, u'objectIdentifierFirstComponentMatch': Matching rule: 2.5.13.30
+  Short name: objectIdentifierFirstComponentMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.38
+  OidInfo: ('2.5.13.30', 'MATCHING_RULE', 'objectIdentifierFirstComponentMatch', 'RFC4517')
+, u'caseExactOrderingMatch': Matching rule: 2.5.13.6
+  Short name: caseExactOrderingMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15
+  OidInfo: ('2.5.13.6', 'MATCHING_RULE', 'caseExactOrderingMatch', 'RFC4517')
+, u'certificateExactMatch': Matching rule: 2.5.13.34
+  Short name: certificateExactMatch
+  Syntax: 1.3.6.1.1.15.1
+  OidInfo: ('2.5.13.34', 'MATCHING_RULE', 'certificateExactMatch', 'RFC4523')
+, u'integerMatch': Matching rule: 2.5.13.14
+  Short name: integerMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27
+  OidInfo: ('2.5.13.14', 'MATCHING_RULE', 'integerMatch', 'RFC4517')
+, u'caseExactMatch': Matching rule: 2.5.13.5
+  Short name: caseExactMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15
+  OidInfo: ('2.5.13.5', 'MATCHING_RULE', 'caseExactMatch', 'RFC4517')
+, u'caseIgnoreIA5SubstringsMatch': Matching rule: 1.3.6.1.4.1.1466.109.114.3
+  Short name: caseIgnoreIA5SubstringsMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.26
+  OidInfo: ('1.3.6.1.4.1.1466.109.114.3', 'MATCHING_RULE', 'caseIgnoreIA5SubstringsMatch', 'RFC4517')
+, u'booleanMatch': Matching rule: 2.5.13.13
+  Short name: booleanMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.7
+  OidInfo: ('2.5.13.13', 'MATCHING_RULE', 'booleanMatch', 'RFC4517')
+, u'caseIgnoreMatch': Matching rule: 2.5.13.2
+  Short name: caseIgnoreMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15
+  OidInfo: ('2.5.13.2', 'MATCHING_RULE', 'caseIgnoreMatch', 'RFC4517')
+, u'integerOrderingMatch': Matching rule: 2.5.13.15
+  Short name: integerOrderingMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27
+  OidInfo: ('2.5.13.15', 'MATCHING_RULE', 'integerOrderingMatch', 'RFC4517')
+, u'integerBitOrMatch': Matching rule: 1.2.840.113556.1.4.804
+  Short name: integerBitOrMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27
+  OidInfo: ('1.2.840.113556.1.4.804', 'MATCHING_RULE', 'Bit OR', 'MICROSOFT')
+, u'numericStringMatch': Matching rule: 2.5.13.8
+  Short name: numericStringMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.36
+  OidInfo: ('2.5.13.8', 'MATCHING_RULE', 'numericStringMatch', 'RFC4517')
+, u'generalizedTimeMatch': Matching rule: 2.5.13.27
+  Short name: generalizedTimeMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.24
+  OidInfo: ('2.5.13.27', 'MATCHING_RULE', 'generalizedTimeMatch', 'RFC4517')
+, u'objectIdentifierMatch': Matching rule: 2.5.13.0
+  Short name: objectIdentifierMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.38
+  OidInfo: ('2.5.13.0', 'MATCHING_RULE', 'objectIdentifierMatch', 'RFC4517')
+, u'integerBitAndMatch': Matching rule: 1.2.840.113556.1.4.803
+  Short name: integerBitAndMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27
+  OidInfo: ('1.2.840.113556.1.4.803', 'MATCHING_RULE', 'Bit AND', 'MICROSOFT')
+, u'numericStringOrderingMatch': Matching rule: 2.5.13.9
+  Short name: numericStringOrderingMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.36
+  OidInfo: ('2.5.13.9', 'MATCHING_RULE', 'numericStringOrderingMatch', 'RFC4517')
+, u'caseIgnoreSubstringsMatch': Matching rule: 2.5.13.4
+  Short name: caseIgnoreSubstringsMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.58
+  OidInfo: ('2.5.13.4', 'MATCHING_RULE', 'caseIgnoreSubstringsMatch', 'RFC4517')
+, u'UUIDOrderingMatch': Matching rule: 1.3.6.1.1.16.3
+  Short name: UUIDOrderingMatch
+  Syntax: 1.3.6.1.1.16.1
+  OidInfo: ('1.3.6.1.1.16.3', 'MATCHING_RULE', 'uuidOrderingMatch', 'RFC4530')
+, u'octetStringMatch': Matching rule: 2.5.13.17
+  Short name: octetStringMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.40
+  OidInfo: ('2.5.13.17', 'MATCHING_RULE', 'octetStringMatch', 'RFC4517')
+, u'numericStringSubstringsMatch': Matching rule: 2.5.13.10
+  Short name: numericStringSubstringsMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.58
+  OidInfo: ('2.5.13.10', 'MATCHING_RULE', 'numericStringSubstringsMatch', 'RFC4517')
+, u'octetStringOrderingMatch': Matching rule: 2.5.13.18
+  Short name: octetStringOrderingMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.40
+  OidInfo: ('2.5.13.18', 'MATCHING_RULE', 'octetStringOrderingMatch', 'RFC4517')
+, u'uniqueMemberMatch': Matching rule: 2.5.13.23
+  Short name: uniqueMemberMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.34
+  OidInfo: ('2.5.13.23', 'MATCHING_RULE', 'uniqueMemberMatch', 'RFC4517')
+, u'caseIgnoreIA5Match': Matching rule: 1.3.6.1.4.1.1466.109.114.2
+  Short name: caseIgnoreIA5Match
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.26
+  OidInfo: ('1.3.6.1.4.1.1466.109.114.2', 'MATCHING_RULE', 'caseIgnoreIA5Match', 'RFC4517')
+, u'telephoneNumberSubstringsMatch': Matching rule: 2.5.13.21
+  Short name: telephoneNumberSubstringsMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.58
+  OidInfo: ('2.5.13.21', 'MATCHING_RULE', 'telephoneNumberSubstringsMatch', 'RFC4517')
+, u'integerFirstComponentMatch': Matching rule: 2.5.13.29
+  Short name: integerFirstComponentMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.27
+  OidInfo: ('2.5.13.29', 'MATCHING_RULE', 'integerFirstComponentMatch', 'RFC4517')
+, u'certificateListExactMatch': Matching rule: 2.5.13.38
+  Short name: certificateListExactMatch
+  Syntax: 1.3.6.1.1.15.5
+  OidInfo: ('2.5.13.38', 'MATCHING_RULE', 'certificateListExactMatch', 'RFC4523')
+, u'caseIgnoreOrderingMatch': Matching rule: 2.5.13.3
+  Short name: caseIgnoreOrderingMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.15
+  OidInfo: ('2.5.13.3', 'MATCHING_RULE', 'caseIgnoreOrderingMatch', 'RFC4517')
+, u'distinguishedNameMatch': Matching rule: 2.5.13.1
+  Short name: distinguishedNameMatch
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.12
+  OidInfo: ('2.5.13.1', 'MATCHING_RULE', 'distinguishedNameMatch', 'RFC4517')
+, u'caseExactIA5Match': Matching rule: 1.3.6.1.4.1.1466.109.114.1
+  Short name: caseExactIA5Match
+  Syntax: 1.3.6.1.4.1.1466.115.121.1.26
+  OidInfo: ('1.3.6.1.4.1.1466.109.114.1', 'MATCHING_RULE', 'caseExactIA5Match', 'RFC4517')
+}
+  Matching rule uses:{u'caseExactSubstringsMatch': Matching rule use: 2.5.13.7
+  Short name: caseExactSubstringsMatch
+  Apply to: serialNumber, destinationIndicator, dnQualifier
+  OidInfo: ('2.5.13.7', 'MATCHING_RULE', 'caseExactSubstringsMatch', 'RFC4517')
+, u'caseIgnoreListMatch': Matching rule use: 2.5.13.11
+  Short name: caseIgnoreListMatch
+  Apply to: postalAddress, registeredAddress, homePostalAddress
+  OidInfo: ('2.5.13.11', 'MATCHING_RULE', 'caseIgnoreListMatch', 'RFC4517')
+, u'telephoneNumberMatch': Matching rule use: 2.5.13.20
+  Short name: telephoneNumberMatch
+  Apply to: telephoneNumber, homePhone, mobile, pager
+  OidInfo: ('2.5.13.20', 'MATCHING_RULE', 'telephoneNumberMatch', 'RFC4517')
+, u'bitStringMatch': Matching rule use: 2.5.13.16
+  Short name: bitStringMatch
+  Apply to: x500UniqueIdentifier
+  OidInfo: ('2.5.13.16', 'MATCHING_RULE', 'bitStringMatch', 'RFC4517')
+, u'objectIdentifierFirstComponentMatch': Matching rule use: 2.5.13.30
+  Short name: objectIdentifierFirstComponentMatch
+  Apply to: supportedControl, supportedExtension, supportedFeatures, ldapSyntaxes, supportedApplicationContext
+  OidInfo: ('2.5.13.30', 'MATCHING_RULE', 'objectIdentifierFirstComponentMatch', 'RFC4517')
+, u'caseExactOrderingMatch': Matching rule use: 2.5.13.6
+  Short name: caseExactOrderingMatch
+  Apply to: serialNumber, destinationIndicator, dnQualifier
+  OidInfo: ('2.5.13.6', 'MATCHING_RULE', 'caseExactOrderingMatch', 'RFC4517')
+, u'certificateExactMatch': Matching rule use: 2.5.13.34
+  Short name: certificateExactMatch
+  Apply to: userCertificate, cACertificate
+  OidInfo: ('2.5.13.34', 'MATCHING_RULE', 'certificateExactMatch', 'RFC4523')
+, u'presentationAddressMatch': Matching rule use: 2.5.13.22
+  Short name: presentationAddressMatch
+  Apply to: presentationAddress
+  OidInfo: ('2.5.13.22', 'MATCHING_RULE', 'presentationAddressMatch', 'RFC2252')
+, u'integerMatch': Matching rule use: 2.5.13.14
+  Short name: integerMatch
+  Apply to: supportedLDAPVersion, entryTtl, uidNumber, gidNumber, olcConcurrency, olcConnMaxPending, olcConnMaxPendingAuth, olcIdleTimeout, olcIndexSubstrIfMinLen, olcIndexSubstrIfMaxLen, olcIndexSubstrAnyLen, olcIndexSubstrAnyStep, olcIndexIntLen, olcLocalSSF, olcMaxDerefDepth, olcReplicationInterval, olcSockbufMaxIncoming, olcSockbufMaxIncomingAuth, olcThreads, olcToolThreads, olcWriteTimeout, olcDbCacheFree, olcDbCacheSize, olcDbDNcacheSize, olcDbIDLcacheSize, olcDbSearchStack, olcDbShmKey, mailPreferenceOption, shadowLastChange, shadowMin, shadowMax, shadowWarning, shadowInactive, shadowExpire, shadowFlag, ipServicePort, ipProtocolNumber, oncRpcNumber
+  OidInfo: ('2.5.13.14', 'MATCHING_RULE', 'integerMatch', 'RFC4517')
+, u'caseExactMatch': Matching rule use: 2.5.13.5
+  Short name: caseExactMatch
+  Apply to: supportedSASLMechanisms, vendorName, vendorVersion, ref, name, cn, uid, labeledURI, description, olcConfigFile, olcConfigDir, olcAccess, olcAllows, olcArgsFile, olcAttributeOptions, olcAttributeTypes, olcAuthIDRewrite, olcAuthzPolicy, olcAuthzRegexp, olcBackend, olcDatabase, olcDisallows, olcDitContentRules, olcInclude, olcLdapSyntaxes, olcLimits, olcLogFile, olcLogLevel, olcModuleLoad, olcModulePath, olcObjectClasses, olcObjectIdentifier, olcOverlay, olcPasswordCryptSaltFormat, olcPasswordHash, olcPidFile, olcPlugin, olcPluginLogFile, olcReferral, olcReplica, olcReplicaArgsFile, olcReplicaPidFile, olcReplogFile, olcRequires, olcRestrict, olcRootDSE, olcRootPW, olcSaslAuxprops, olcSaslHost, olcSaslRealm, olcSaslSecProps, olcSecurity, olcServerID, olcSizeLimit, olcSortVals, olcSubordinate, olcSyncrepl, olcTCPBuffer, olcTimeLimit, olcTLSCACertificateFile, olcTLSCACertificatePath, olcTLSCertificateFile, olcTLSCertificateKeyFile, olcTLSCipherSuite, olcTLSCRLCheck, olcTLSCRLFile, olcTLSRandFile, olcTLSVerifyClient, olcTLSDHParamFile, olcTLSProtocolMin, olcUpdateRef, olcDbDirectory, olcDbCheckpoint, olcDbCryptFile, olcDbPageSize, olcDbIndex, olcDbLockDetect, olcDbMode, knowledgeInformation, sn, serialNumber, c, l, st, street, o, ou, title, businessCategory, postalCode, postOfficeBox, physicalDeliveryOfficeName, destinationIndicator, givenName, initials, generationQualifier, dnQualifier, houseIdentifier, dmdName, pseudonym, textEncodedORAddress, info, drink, roomNumber, userClass, host, documentIdentifier, documentTitle, documentVersion, documentLocation, personalTitle, co, uniqueIdentifier, organizationalStatus, buildingName, documentPublisher, ipServiceProtocol, nisMapName, carLicense, departmentNumber, displayName, employeeNumber, employeeType, preferredLanguage
+  OidInfo: ('2.5.13.5', 'MATCHING_RULE', 'caseExactMatch', 'RFC4517')
+, u'booleanMatch': Matching rule use: 2.5.13.13
+  Short name: booleanMatch
+  Apply to: hasSubordinates, olcAddContentAcl, olcGentleHUP, olcHidden, olcLastMod, olcMirrorMode, olcMonitoring, olcReadOnly, olcReverseLookup, olcSyncUseSubentry, olcDbChecksum, olcDbNoSync, olcDbDirtyRead, olcDbLinearIndex
+  OidInfo: ('2.5.13.13', 'MATCHING_RULE', 'booleanMatch', 'RFC4517')
+, u'caseIgnoreMatch': Matching rule use: 2.5.13.2
+  Short name: caseIgnoreMatch
+  Apply to: supportedSASLMechanisms, vendorName, vendorVersion, ref, name, cn, uid, labeledURI, description, olcConfigFile, olcConfigDir, olcAccess, olcAllows, olcArgsFile, olcAttributeOptions, olcAttributeTypes, olcAuthIDRewrite, olcAuthzPolicy, olcAuthzRegexp, olcBackend, olcDatabase, olcDisallows, olcDitContentRules, olcInclude, olcLdapSyntaxes, olcLimits, olcLogFile, olcLogLevel, olcModuleLoad, olcModulePath, olcObjectClasses, olcObjectIdentifier, olcOverlay, olcPasswordCryptSaltFormat, olcPasswordHash, olcPidFile, olcPlugin, olcPluginLogFile, olcReferral, olcReplica, olcReplicaArgsFile, olcReplicaPidFile, olcReplogFile, olcRequires, olcRestrict, olcRootDSE, olcRootPW, olcSaslAuxprops, olcSaslHost, olcSaslRealm, olcSaslSecProps, olcSecurity, olcServerID, olcSizeLimit, olcSortVals, olcSubordinate, olcSyncrepl, olcTCPBuffer, olcTimeLimit, olcTLSCACertificateFile, olcTLSCACertificatePath, olcTLSCertificateFile, olcTLSCertificateKeyFile, olcTLSCipherSuite, olcTLSCRLCheck, olcTLSCRLFile, olcTLSRandFile, olcTLSVerifyClient, olcTLSDHParamFile, olcTLSProtocolMin, olcUpdateRef, olcDbDirectory, olcDbCheckpoint, olcDbCryptFile, olcDbPageSize, olcDbIndex, olcDbLockDetect, olcDbMode, knowledgeInformation, sn, serialNumber, c, l, st, street, o, ou, title, businessCategory, postalCode, postOfficeBox, physicalDeliveryOfficeName, destinationIndicator, givenName, initials, generationQualifier, dnQualifier, houseIdentifier, dmdName, pseudonym, textEncodedORAddress, info, drink, roomNumber, userClass, host, documentIdentifier, documentTitle, documentVersion, documentLocation, personalTitle, co, uniqueIdentifier, organizationalStatus, buildingName, documentPublisher, ipServiceProtocol, nisMapName, carLicense, departmentNumber, displayName, employeeNumber, employeeType, preferredLanguage
+  OidInfo: ('2.5.13.2', 'MATCHING_RULE', 'caseIgnoreMatch', 'RFC4517')
+, u'integerBitOrMatch': Matching rule use: 1.2.840.113556.1.4.804
+  Short name: integerBitOrMatch
+  Apply to: supportedLDAPVersion, entryTtl, uidNumber, gidNumber, olcConcurrency, olcConnMaxPending, olcConnMaxPendingAuth, olcIdleTimeout, olcIndexSubstrIfMinLen, olcIndexSubstrIfMaxLen, olcIndexSubstrAnyLen, olcIndexSubstrAnyStep, olcIndexIntLen, olcLocalSSF, olcMaxDerefDepth, olcReplicationInterval, olcSockbufMaxIncoming, olcSockbufMaxIncomingAuth, olcThreads, olcToolThreads, olcWriteTimeout, olcDbCacheFree, olcDbCacheSize, olcDbDNcacheSize, olcDbIDLcacheSize, olcDbSearchStack, olcDbShmKey, mailPreferenceOption, shadowLastChange, shadowMin, shadowMax, shadowWarning, shadowInactive, shadowExpire, shadowFlag, ipServicePort, ipProtocolNumber, oncRpcNumber
+  OidInfo: ('1.2.840.113556.1.4.804', 'MATCHING_RULE', 'Bit OR', 'MICROSOFT')
+, u'numericStringMatch': Matching rule use: 2.5.13.8
+  Short name: numericStringMatch
+  Apply to: x121Address, internationaliSDNNumber
+  OidInfo: ('2.5.13.8', 'MATCHING_RULE', 'numericStringMatch', 'RFC4517')
+, u'generalizedTimeMatch': Matching rule use: 2.5.13.27
+  Short name: generalizedTimeMatch
+  Apply to: createTimestamp, modifyTimestamp
+  OidInfo: ('2.5.13.27', 'MATCHING_RULE', 'generalizedTimeMatch', 'RFC4517')
+, u'objectIdentifierMatch': Matching rule use: 2.5.13.0
+  Short name: objectIdentifierMatch
+  Apply to: supportedControl, supportedExtension, supportedFeatures, supportedApplicationContext
+  OidInfo: ('2.5.13.0', 'MATCHING_RULE', 'objectIdentifierMatch', 'RFC4517')
+, u'integerBitAndMatch': Matching rule use: 1.2.840.113556.1.4.803
+  Short name: integerBitAndMatch
+  Apply to: supportedLDAPVersion, entryTtl, uidNumber, gidNumber, olcConcurrency, olcConnMaxPending, olcConnMaxPendingAuth, olcIdleTimeout, olcIndexSubstrIfMinLen, olcIndexSubstrIfMaxLen, olcIndexSubstrAnyLen, olcIndexSubstrAnyStep, olcIndexIntLen, olcLocalSSF, olcMaxDerefDepth, olcReplicationInterval, olcSockbufMaxIncoming, olcSockbufMaxIncomingAuth, olcThreads, olcToolThreads, olcWriteTimeout, olcDbCacheFree, olcDbCacheSize, olcDbDNcacheSize, olcDbIDLcacheSize, olcDbSearchStack, olcDbShmKey, mailPreferenceOption, shadowLastChange, shadowMin, shadowMax, shadowWarning, shadowInactive, shadowExpire, shadowFlag, ipServicePort, ipProtocolNumber, oncRpcNumber
+  OidInfo: ('1.2.840.113556.1.4.803', 'MATCHING_RULE', 'Bit AND', 'MICROSOFT')
+, u'protocolInformationMatch': Matching rule use: 2.5.13.24
+  Short name: protocolInformationMatch
+  Apply to: protocolInformation
+  OidInfo: ('2.5.13.24', 'MATCHING_RULE', 'protocolInformationMatch', 'RFC2252')
+, u'caseIgnoreSubstringsMatch': Matching rule use: 2.5.13.4
+  Short name: caseIgnoreSubstringsMatch
+  Apply to: serialNumber, destinationIndicator, dnQualifier
+  OidInfo: ('2.5.13.4', 'MATCHING_RULE', 'caseIgnoreSubstringsMatch', 'RFC4517')
+, u'octetStringMatch': Matching rule use: 2.5.13.17
+  Short name: octetStringMatch
+  Apply to: userPassword, olcDbCryptKey
+  OidInfo: ('2.5.13.17', 'MATCHING_RULE', 'octetStringMatch', 'RFC4517')
+, u'uniqueMemberMatch': Matching rule use: 2.5.13.23
+  Short name: uniqueMemberMatch
+  Apply to: uniqueMember
+  OidInfo: ('2.5.13.23', 'MATCHING_RULE', 'uniqueMemberMatch', 'RFC4517')
+, u'caseIgnoreIA5Match': Matching rule use: 1.3.6.1.4.1.1466.109.114.2
+  Short name: caseIgnoreIA5Match
+  Apply to: altServer, olcDbConfig, mail, dc, associatedDomain, email, aRecord, mDRecord, mXRecord, nSRecord, sOARecord, cNAMERecord, janetMailbox, gecos, homeDirectory, loginShell, memberUid, memberNisNetgroup, ipHostNumber, ipNetworkNumber, ipNetmaskNumber, macAddress, bootFile, nisMapEntry
+  OidInfo: ('1.3.6.1.4.1.1466.109.114.2', 'MATCHING_RULE', 'caseIgnoreIA5Match', 'RFC4517')
+, u'integerFirstComponentMatch': Matching rule use: 2.5.13.29
+  Short name: integerFirstComponentMatch
+  Apply to: supportedLDAPVersion, entryTtl, uidNumber, gidNumber, olcConcurrency, olcConnMaxPending, olcConnMaxPendingAuth, olcIdleTimeout, olcIndexSubstrIfMinLen, olcIndexSubstrIfMaxLen, olcIndexSubstrAnyLen, olcIndexSubstrAnyStep, olcIndexIntLen, olcLocalSSF, olcMaxDerefDepth, olcReplicationInterval, olcSockbufMaxIncoming, olcSockbufMaxIncomingAuth, olcThreads, olcToolThreads, olcWriteTimeout, olcDbCacheFree, olcDbCacheSize, olcDbDNcacheSize, olcDbIDLcacheSize, olcDbSearchStack, olcDbShmKey, mailPreferenceOption, shadowLastChange, shadowMin, shadowMax, shadowWarning, shadowInactive, shadowExpire, shadowFlag, ipServicePort, ipProtocolNumber, oncRpcNumber
+  OidInfo: ('2.5.13.29', 'MATCHING_RULE', 'integerFirstComponentMatch', 'RFC4517')
+, u'certificateListExactMatch': Matching rule use: 2.5.13.38
+  Short name: certificateListExactMatch
+  Apply to: authorityRevocationList, certificateRevocationList, deltaRevocationList
+  OidInfo: ('2.5.13.38', 'MATCHING_RULE', 'certificateListExactMatch', 'RFC4523')
+, u'caseIgnoreOrderingMatch': Matching rule use: 2.5.13.3
+  Short name: caseIgnoreOrderingMatch
+  Apply to: serialNumber, destinationIndicator, dnQualifier
+  OidInfo: ('2.5.13.3', 'MATCHING_RULE', 'caseIgnoreOrderingMatch', 'RFC4517')
+, u'distinguishedNameMatch': Matching rule use: 2.5.13.1
+  Short name: distinguishedNameMatch
+  Apply to: creatorsName, modifiersName, subschemaSubentry, entryDN, namingContexts, aliasedObjectName, dynamicSubtrees, distinguishedName, seeAlso, olcDefaultSearchBase, olcRootDN, olcSchemaDN, olcSuffix, olcUpdateDN, member, owner, roleOccupant, manager, documentAuthor, secretary, associatedName, dITRedirect
+  OidInfo: ('2.5.13.1', 'MATCHING_RULE', 'distinguishedNameMatch', 'RFC4517')
+, u'caseExactIA5Match': Matching rule use: 1.3.6.1.4.1.1466.109.114.1
+  Short name: caseExactIA5Match
+  Apply to: altServer, olcDbConfig, mail, dc, associatedDomain, email, aRecord, mDRecord, mXRecord, nSRecord, sOARecord, cNAMERecord, janetMailbox, gecos, homeDirectory, loginShell, memberUid, memberNisNetgroup, ipHostNumber, ipNetworkNumber, ipNetmaskNumber, macAddress, bootFile, nisMapEntry
+  OidInfo: ('1.3.6.1.4.1.1466.109.114.1', 'MATCHING_RULE', 'caseExactIA5Match', 'RFC4517')
+}
+  DIT content rules:{}
+  DIT structure rules:{}
+  Name forms:{}
+  LDAP syntaxes:{u'1.2.36.79672281.1.5.0': LDAP syntax: 1.2.36.79672281.1.5.0
+  Description: RDN
+, u'1.3.6.1.4.1.1466.115.121.1.26': LDAP syntax: 1.3.6.1.4.1.1466.115.121.1.26
+  Description: IA5 String
+  OidInfo: ('1.3.6.1.4.1.1466.115.121.1.26', 'LDAP_SYNTAX', 'IA5 String', 'RFC4517')
+, u'1.3.6.1.4.1.1466.115.121.1.41': LDAP syntax: 1.3.6.1.4.1.1466.115.121.1.41
+  Description: Postal Address
+  OidInfo: ('1.3.6.1.4.1.1466.115.121.1.41', 'LDAP_SYNTAX', 'Postal Address', 'RFC4517')
+, u'1.3.6.1.4.1.1466.115.121.1.52': LDAP syntax: 1.3.6.1.4.1.1466.115.121.1.52
+  Description: Telex Number
+  OidInfo: ('1.3.6.1.4.1.1466.115.121.1.52', 'LDAP_SYNTAX', 'Telex Number', 'RFC4517')
+, u'1.3.6.1.1.16.1': LDAP syntax: 1.3.6.1.1.16.1
+  Description: UUID
+  OidInfo: ('1.3.6.1.1.16.1', 'LDAP_SYNTAX', 'Universally Unique Identifier (UUID)', 'RFC4530')
+, u'1.3.6.1.4.1.1466.115.121.1.50': LDAP syntax: 1.3.6.1.4.1.1466.115.121.1.50
+  Description: Telephone Number
+  OidInfo: ('1.3.6.1.4.1.1466.115.121.1.50', 'LDAP_SYNTAX', 'Telephone Number', 'RFC4517')
+, u'1.3.6.1.4.1.1466.115.121.1.28': LDAP syntax: 1.3.6.1.4.1.1466.115.121.1.28
+  Description: JPEG
+  Extensions:
+    X-NOT-HUMAN-READABLE: TRUE
+  OidInfo: ('1.3.6.1.4.1.1466.115.121.1.28', 'LDAP_SYNTAX', 'JPEG', 'RFC4517')
+, u'1.3.6.1.4.1.1466.115.121.1.49': LDAP syntax: 1.3.6.1.4.1.1466.115.121.1.49
+  Description: Supported Algorithm
+  Extensions:
+    X-BINARY-TRANSFER-REQUIRED: TRUE
+    X-NOT-HUMAN-READABLE: TRUE
+  OidInfo: ('1.3.6.1.4.1.1466.115.121.1.49', 'LDAP_SYNTAX', 'Supported Algorithm [OBSOLETE]', 'RFC2252')
+, u'1.3.6.1.4.1.1466.115.121.1.22': LDAP syntax: 1.3.6.1.4.1.1466.115.121.1.22
+  Description: Facsimile Telephone Number
+  OidInfo: ('1.3.6.1.4.1.1466.115.121.1.22', 'LDAP_SYNTAX', 'Facsimile Telephone Number', 'RFC4517')
+, u'1.3.6.1.4.1.1466.115.121.1.45': LDAP syntax: 1.3.6.1.4.1.1466.115.121.1.45
+  Description: SubtreeSpecification
+  OidInfo: ('1.3.6.1.4.1.1466.115.121.1.45', 'LDAP_SYNTAX', 'Subtree specification [OBSOLETE]', 'RFC2252')
+, u'1.3.6.1.4.1.1466.115.121.1.40': LDAP syntax: 1.3.6.1.4.1.1466.115.121.1.40
+  Description: Octet String
+  OidInfo: ('1.3.6.1.4.1.1466.115.121.1.40', 'LDAP_SYNTAX', 'Octet String', 'RFC4517')
+, u'1.3.6.1.4.1.1466.115.121.1.27': LDAP syntax: 1.3.6.1.4.1.1466.115.121.1.27
+  Description: Integer
+  OidInfo: ('1.3.6.1.4.1.1466.115.121.1.27', 'LDAP_SYNTAX', 'Integer', 'RFC4517')
+, u'1.3.6.1.4.1.1466.115.121.1.24': LDAP syntax: 1.3.6.1.4.1.1466.115.121.1.24
+  Description: Generalized Time
+  OidInfo: ('1.3.6.1.4.1.1466.115.121.1.24', 'LDAP_SYNTAX', 'Generalized Time', 'RFC4517')
+, u'1.3.6.1.4.1.4203.666.11.10.2.1': LDAP syntax: 1.3.6.1.4.1.4203.666.11.10.2.1
+  Description: X.509 AttributeCertificate
+  Extensions:
+    X-BINARY-TRANSFER-REQUIRED: TRUE
+    X-NOT-HUMAN-READABLE: TRUE
+, u'1.3.6.1.1.1.0.0': LDAP syntax: 1.3.6.1.1.1.0.0
+  Description: RFC2307 NIS Netgroup Triple
+, u'1.3.6.1.1.1.0.1': LDAP syntax: 1.3.6.1.1.1.0.1
+  Description: RFC2307 Boot Parameter
+, u'1.3.6.1.4.1.1466.115.121.1.39': LDAP syntax: 1.3.6.1.4.1.1466.115.121.1.39
+  Description: Other Mailbox
+  OidInfo: ('1.3.6.1.4.1.1466.115.121.1.39', 'LDAP_SYNTAX', 'Other Mailbox', 'RFC4517')
+, u'1.3.6.1.4.1.1466.115.121.1.38': LDAP syntax: 1.3.6.1.4.1.1466.115.121.1.38
+  Description: OID
+  OidInfo: ('1.3.6.1.4.1.1466.115.121.1.38', 'LDAP_SYNTAX', 'OID', 'RFC4517')
+, u'1.3.6.1.4.1.1466.115.121.1.15': LDAP syntax: 1.3.6.1.4.1.1466.115.121.1.15
+  Description: Directory String
+  OidInfo: ('1.3.6.1.4.1.1466.115.121.1.15', 'LDAP_SYNTAX', 'Directory String', 'RFC4517')
+, u'1.3.6.1.4.1.1466.115.121.1.14': LDAP syntax: 1.3.6.1.4.1.1466.115.121.1.14
+  Description: Delivery Method
+  OidInfo: ('1.3.6.1.4.1.1466.115.121.1.14', 'LDAP_SYNTAX', 'Delivery Method', 'RFC4517')
+, u'1.3.6.1.4.1.1466.115.121.1.12': LDAP syntax: 1.3.6.1.4.1.1466.115.121.1.12
+  Description: Distinguished Name
+  OidInfo: ('1.3.6.1.4.1.1466.115.121.1.12', 'LDAP_SYNTAX', 'DN', 'RFC4517')
+, u'1.3.6.1.4.1.1466.115.121.1.11': LDAP syntax: 1.3.6.1.4.1.1466.115.121.1.11
+  Description: Country String
+  OidInfo: ('1.3.6.1.4.1.1466.115.121.1.11', 'LDAP_SYNTAX', 'Country String', 'RFC4517')
+, u'1.3.6.1.4.1.1466.115.121.1.10': LDAP syntax: 1.3.6.1.4.1.1466.115.121.1.10
+  Description: Certificate Pair
+  Extensions:
+    X-BINARY-TRANSFER-REQUIRED: TRUE
+    X-NOT-HUMAN-READABLE: TRUE
+  OidInfo: ('1.3.6.1.4.1.1466.115.121.1.10', 'LDAP_SYNTAX', 'Certificate Pair [OBSOLETE]', 'RFC2252')
+, u'1.3.6.1.4.1.1466.115.121.1.34': LDAP syntax: 1.3.6.1.4.1.1466.115.121.1.34
+  Description: Name And Optional UID
+  OidInfo: ('1.3.6.1.4.1.1466.115.121.1.34', 'LDAP_SYNTAX', 'Name And Optional UID', 'RFC4517')
+, u'1.3.6.1.4.1.1466.115.121.1.36': LDAP syntax: 1.3.6.1.4.1.1466.115.121.1.36
+  Description: Numeric String
+  OidInfo: ('1.3.6.1.4.1.1466.115.121.1.36', 'LDAP_SYNTAX', 'Numeric String', 'RFC4517')
+, u'1.3.6.1.4.1.1466.115.121.1.44': LDAP syntax: 1.3.6.1.4.1.1466.115.121.1.44
+  Description: Printable String
+  OidInfo: ('1.3.6.1.4.1.1466.115.121.1.44', 'LDAP_SYNTAX', 'Printable String', 'RFC4517')
+, u'1.3.6.1.4.1.1466.115.121.1.7': LDAP syntax: 1.3.6.1.4.1.1466.115.121.1.7
+  Description: Boolean
+  OidInfo: ('1.3.6.1.4.1.1466.115.121.1.7', 'LDAP_SYNTAX', 'Boolean', 'RFC4517')
+, u'1.3.6.1.4.1.1466.115.121.1.6': LDAP syntax: 1.3.6.1.4.1.1466.115.121.1.6
+  Description: Bit String
+  OidInfo: ('1.3.6.1.4.1.1466.115.121.1.6', 'LDAP_SYNTAX', 'Bit String', 'RFC4517')
+, u'1.3.6.1.4.1.1466.115.121.1.5': LDAP syntax: 1.3.6.1.4.1.1466.115.121.1.5
+  Description: Binary
+  Extensions:
+    X-NOT-HUMAN-READABLE: TRUE
+  OidInfo: ('1.3.6.1.4.1.1466.115.121.1.5', 'LDAP_SYNTAX', 'Binary [OBSOLETE]', 'RFC2252')
+, u'1.3.6.1.4.1.1466.115.121.1.4': LDAP syntax: 1.3.6.1.4.1.1466.115.121.1.4
+  Description: Audio
+  Extensions:
+    X-NOT-HUMAN-READABLE: TRUE
+  OidInfo: ('1.3.6.1.4.1.1466.115.121.1.4', 'LDAP_SYNTAX', 'Audio [OBSOLETE]', 'RFC2252')
+, u'1.3.6.1.4.1.1466.115.121.1.9': LDAP syntax: 1.3.6.1.4.1.1466.115.121.1.9
+  Description: Certificate List
+  Extensions:
+    X-BINARY-TRANSFER-REQUIRED: TRUE
+    X-NOT-HUMAN-READABLE: TRUE
+  OidInfo: ('1.3.6.1.4.1.1466.115.121.1.9', 'LDAP_SYNTAX', 'Certificate List [OBSOLETE]', 'RFC2252')
+, u'1.3.6.1.4.1.1466.115.121.1.8': LDAP syntax: 1.3.6.1.4.1.1466.115.121.1.8
+  Description: Certificate
+  Extensions:
+    X-BINARY-TRANSFER-REQUIRED: TRUE
+    X-NOT-HUMAN-READABLE: TRUE
+  OidInfo: ('1.3.6.1.4.1.1466.115.121.1.8', 'LDAP_SYNTAX', 'Certificate [OBSOLETE]', 'RFC2252')
+}
+Other:
+  cn: 
+    Subschema
+  objectClass: 
+    top
+    subentry
+    subschema
+    extensibleObject
+  entryDN: 
+cn=Subschema
+  subschemaSubentry: 
+cn=Subschema
+  structuralObjectClass: 
+subentry
+

@@ -1,0 +1,8 @@
+docker
+pyyaml
+pyroute2
+nsenter
+netaddr
+mako
+six
+packaging

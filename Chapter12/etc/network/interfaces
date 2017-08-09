@@ -1,0 +1,18 @@
+auto eth1
+iface eth1 inet static
+        address 0.0.0.0
+        up ifconfig $IFACE up
+        down ifconfig $IFACE down
+
+auto vhost0
+iface vhost0 inet static
+        pre-up vif --create vhost0 --mac $(cat /sys/class/net/eth1/address)
+        pre-up vif --add vhost0 --mac $(cat /sys/class/net/eth1/address) --vrf 0 --mode x --type vhost
+        pre-up vif --add eth1 --mac $(cat /sys/class/net/eth1/address) --vrf 0 --mode x --type physical
+        address 10.8.1.11
+        netmask 255.255.255.0
+        #network 10.8.1.0
+        #broadcast 10.8.1.255
+        #gateway 10.8.1.254
+        # dns-* options are implemented by the resolvconf package, if installed
+        dns-nameservers 8.8.8.8

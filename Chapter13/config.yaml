@@ -1,0 +1,2 @@
+# Kafka server address
+bootstrap_servers: localhost:9092
