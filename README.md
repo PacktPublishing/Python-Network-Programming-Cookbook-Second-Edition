@@ -26,11 +26,14 @@ Hello from Epoll Server!"""
 ```
 ##Software and Hardware Requirements
 
-Software and Hardware requirements
 You need a working PC or laptop, preferably with a modern Linux operating system. The installation instructions are written and tested on Ubuntu 16.04 LTS and would work on any recent Debian-based Linux operating system without modification. We developed for Python 3. However, we have maintained backward-compatibility with Python 2 in our recipes as much as we can. On the other hand, some open source projects used in this book do not yet support Python 3. So, ideally, you will need both Python 2 and Python 3 to test all the recipes in this book.
+
 Most of the recipes in this book will run on other platforms such as Windows and Mac OS with some changes in the configuration steps. Some of the recipes require two or more computers in a cluster to test the distributed systems. You may use Amazon Web Services (AWS) to initiate a cluster inside a single placement group to test these recipes.
+
 You also need a working internet connection to install the third-party software libraries mentioned with respective recipes. If you do not have a stable or continuous internet connection, you can download the third-party libraries and install them in one go. However, it is highly recommended to test some of these recipes with the internet connection, as it would make the configuration task minimal and more interesting, than having to download a bulk of software in bunch. Moreover, testing the application in an AWS cluster would certainly require the internet connectivity.
+
 The following is a list of the Python third-party libraries with their download URLs:
+
 •	ntplib: https://pypi.python.org/pypi/ntplib/
 •	diesel: https://pypi.python.org/pypi/diesel/
 •	nmap: https://pypi.python.org/pypi/python-nmap
